@@ -5,7 +5,9 @@ import './index.css';
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: []
+  routes: [
+    { path: '/', component: () => import('@/views/index.vue') }
+  ]
 });
 
 const app = createApp(App);
