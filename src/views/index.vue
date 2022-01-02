@@ -5,7 +5,7 @@
 
   <p>My hobby is cycling. If you happen to be in the same city I live (currently in Hangzhou), maybe we can go out together and enjoy the scenery of nature.</p>
 
-  <p>Find me on <a href="https://github.com/Hongbusi" target="_blank">GitHub</a>, mail me at <a href="mailto:951686662@qq.com" target="_blank">951686662@qq.com</a>.</p>
+  <p>Find me on <a href="https://github.com/Hongbusi" target="_blank">GitHub</a>, <a href="https://twitter.com/Hongbusi" target="_blank">Twitter</a>, mail me at <a href="mailto:951686662@qq.com" target="_blank">951686662@qq.com</a>.</p>
 </template>
 
 <style scoped>
