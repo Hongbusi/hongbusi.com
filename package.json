@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^7.5.1",
+    "nprogress": "^0.2.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
@@ -14,6 +15,7 @@
     "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^16.0.0",
     "@iconify/json": "^1.1.451",
+    "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "autoprefixer": "^10.4.1",
     "husky": "^7.0.4",
