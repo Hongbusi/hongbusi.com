@@ -1,9 +1,9 @@
 
 
 <template>
-  <hello-world />
+  <plum />
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
+import Plum from './components/Plum.vue';
 </script>
