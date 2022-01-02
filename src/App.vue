@@ -2,8 +2,9 @@
 
 <template>
   <plum />
+  <nav-bar />
+  <main class="px-7 py-10">
+    <router-view />
+    <footer />
+  </main>
 </template>
-
-<script setup lang="ts">
-import Plum from './components/Plum.vue';
-</script>
