@@ -8,7 +8,7 @@
     >
       <img src="/logo.png" alt="logo">
     </router-link>
-    <nav class="nav px-10 py-10">
+    <nav class="nav py-10">
       <a href="https://hongbusi.github.io/daily-reading" target="_blank" title="DailyReading">
         <ri-article-line />
       </a>
