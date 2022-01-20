@@ -19,10 +19,10 @@ const el = ref<HTMLCanvasElement | null>(null);
 const { random } = Math;
 const size = reactive(useWindowSize());
 
-const start = ref<Fn>(() => {})
-const init = ref(4)
-const len = ref(6)
-const stopped = ref(false)
+const start = ref<Fn>(() => {});
+const init = ref(4);
+const len = ref(6);
+const stopped = ref(false);
 
 function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
   const ctx = canvas.getContext('2d')!;

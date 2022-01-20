@@ -8,9 +8,9 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core';
 
-const isDark = useDark()
+const isDark = useDark();
 
 function toggleDark() {
-  isDark.value = !isDark.value
+  isDark.value = !isDark.value;
 }
 </script>
