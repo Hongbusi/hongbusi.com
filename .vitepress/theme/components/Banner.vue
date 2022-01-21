@@ -16,6 +16,8 @@ function dismiss() {
   document.documentElement.classList.add('banner-dismissed')
   localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true')
 }
+
+dismiss();
 </script>
 
 <template>
