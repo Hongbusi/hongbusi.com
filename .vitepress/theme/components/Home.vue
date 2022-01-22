@@ -25,9 +25,9 @@
   <section id="special-sponsor">
     <span>
       This site is built with
-      <VTLink class="link" href="https://news.vuejs.org/" no-icon>VitePress</VTLink>
+      <VTLink class="link" href="https://github.com/vuejs/vitepress" no-icon>VitePress</VTLink>
       and depends on
-      <VTLink class="link" href="https://news.vuejs.org/" no-icon>@vue/theme</VTLink>.
+      <VTLink class="link" href="https://github.com/vuejs/theme" no-icon>@vue/theme</VTLink>.
     </span>
   </section>
 
