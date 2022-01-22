@@ -46,7 +46,7 @@
     </div>
   </section>
 
-  <FriendlyLink />
+  <!-- <FriendlyLink /> -->
 </template>
 
 <script setup lang="ts">

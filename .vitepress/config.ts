@@ -26,6 +26,13 @@ export default defineConfigWithTheme<Config>({
 
   head: [
     [
+      'link',
+      {
+        rel: 'icon',
+        href: '/favicon.ico'
+      }
+    ],
+    [
       'script',
       {},
       fs.readFileSync(path.resolve(__dirname, './inlined-scripts/restorePreference.js'), 'utf-8')
