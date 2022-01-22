@@ -3,10 +3,7 @@
     <h1 class="tagline">
       <span class="accent">Hongbusi</span>
     </h1>
-    <p class="description">
-      An approachable, performant and versatile framework for building web
-      user interfaces.
-    </p>
+    <p class="description">The more you know, the more you don't know.</p>
     <p class="actions">
       <a class="get-started" href="/guide/introduction.html">
         Get Started
@@ -26,7 +23,12 @@
   </section>
 
   <section id="special-sponsor">
-    <span>The more you know, the more you don't know.</span>
+    <span>
+      This site is built with
+      <VTLink class="link" href="https://news.vuejs.org/" no-icon>VitePress</VTLink>
+      and depends on
+      <VTLink class="link" href="https://news.vuejs.org/" no-icon>@vue/theme</VTLink>.
+    </span>
   </section>
 
   <section id="highlights" class="vt-box-container">
@@ -48,6 +50,7 @@
 </template>
 
 <script setup lang="ts">
+import { VTLink } from '@vue/theme';
 import FriendlyLink from './FriendlyLink.vue';
 </script>
 
@@ -146,6 +149,15 @@ html:not(.dark) .accent,
   font-weight: 500;
   font-size: 13px;
   vertical-align: middle;
+}
+
+#special-sponsor .link {
+  color: var(--vt-c-brand);
+  transition: color 0.25s;
+}
+
+#special-sponsor .link:hover {
+  color: var(--vt-c-brand-dark);
 }
 
 #special-sponsor img {

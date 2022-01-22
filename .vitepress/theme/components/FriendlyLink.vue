@@ -17,6 +17,10 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { VTLink } from '@vue/theme';
+</script>
+
 <style scoped>
 .friendly-link {
   border-top: 1px solid transparent;

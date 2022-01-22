@@ -1,30 +1,20 @@
-<script setup>
-/**
- * Adding a new banner:
- * 1. uncomment the banner slot in ../index.ts
- * 2. uncomment and update BANNER_ID in ../../inlined-scripts/restorePreferences.ts
- * 3. update --vt-banner-height if necessary
- */
-
-let open = $ref(true)
-
-/**
- * Call this if the banner is dismissible
- */
-function dismiss() {
-  open = false
-  document.documentElement.classList.add('banner-dismissed')
-  localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true')
-}
-
-dismiss();
-</script>
-
 <template>
   <div class="banner" v-if="open">
     Work in Progress - for Preview Only
   </div>
 </template>
+
+<script setup>
+let open = $ref(true);
+
+function dismiss() {
+  open = false;
+  document.documentElement.classList.add('banner-dismissed');
+  localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true');
+}
+
+dismiss();
+</script>
 
 <style>
 html:not(.banner-dismissed) {

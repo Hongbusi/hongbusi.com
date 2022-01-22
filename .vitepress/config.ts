@@ -77,10 +77,6 @@ export default defineConfigWithTheme<Config>({
     },
 
     footer: {
-      // license: {
-      //   text: 'MIT License',
-      //   link: 'https://opensource.org/licenses/MIT'
-      // },
       copyright: `Copyright © 2019-${new Date().getFullYear()} Hongbusi`
     }
   },
