@@ -23,33 +23,12 @@ export default defineConfigWithTheme<Config>({
   title: 'Hongbusi',
   description: "The more you know, the more you don't know.",
   srcDir: 'src',
-  // srcExclude: ['tutorial/**/description.md'],
-  // scrollOffset: 'header',
 
   head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://sponsors.vuejs.org'
-      }
-    ],
     [
       'script',
       {},
-      fs.readFileSync(
-        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
-        'utf-8'
-      )
+      fs.readFileSync(path.resolve(__dirname, './inlined-scripts/restorePreference.js'), 'utf-8')
     ]
   ],
 
@@ -57,14 +36,14 @@ export default defineConfigWithTheme<Config>({
     nav,
     sidebar,
 
-    algolia: {
-      indexName: 'vuejs',
-      appId: 'ML0LEBN7FQ',
-      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
-      searchParameters: {
-        facetFilters: ['version:v3']
-      }
-    },
+    // algolia: {
+    //   indexName: 'vuejs',
+    //   appId: 'ML0LEBN7FQ',
+    //   apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
+    //   searchParameters: {
+    //     facetFilters: ['version:v3']
+    //   }
+    // },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Hongbusi' },
