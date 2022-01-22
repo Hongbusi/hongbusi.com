@@ -1,42 +1,7 @@
-<script setup lang="ts">
-import { VTLink } from '@vue/theme'
-</script>
-
 <template>
-  <section id="newsletter" class="NewsLetter">
+  <section id="friendly-link" class="friendly-link">
     <div class="container">
-      <h2 class="title">Subscribe to our weekly newsletter.</h2>
-
-      <div class="form">
-        <form
-          class="box"
-          id="revue-form"
-          name="revue-form"
-          method="post"
-          action="https://www.getrevue.co/profile/vuenewsletter/add_subscriber"
-          rel="noopener"
-          target="_blank"
-        >
-          <input
-            class="input"
-            id="member_email"
-            name="member[email]"
-            type="email"
-            placeholder="Email address"
-            required
-          />
-
-          <div class="action">
-            <input
-              class="button"
-              id="member_submit"
-              name="member[subscribe]"
-              type="submit"
-              value="SUBSCRIBE"
-            />
-          </div>
-        </form>
-      </div>
+      <h2 class="title">友情链接</h2>
 
       <p class="help">
         You can read the previous issues and listen to our podcast at
@@ -53,7 +18,7 @@ import { VTLink } from '@vue/theme'
 </template>
 
 <style scoped>
-.NewsLetter {
+.friendly-link {
   border-top: 1px solid transparent;
   border-bottom: 1px solid var(--vt-c-divider-light);
   padding: 32px 24px;
@@ -61,14 +26,14 @@ import { VTLink } from '@vue/theme'
   transition: border-color 0.5s, background-color 0.5s;
 }
 
-.dark .NewsLetter {
+.dark .friendly-link {
   border-top-color: var(--vt-c-divider-light);
   border-bottom-color: transparent;
   background: var(--vt-c-bg);
 }
 
 @media (min-width: 768px) {
-  .NewsLetter {
+  .friendly-link {
     padding: 48px 32px;
   }
 }

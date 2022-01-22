@@ -1,14 +1,7 @@
-<script setup lang="ts">
-import NewsLetter from './NewsLetter.vue'
-import SponsorsGroup from './SponsorsGroup.vue';
-</script>
-
 <template>
   <section id="hero">
     <h1 class="tagline">
-      The
-      <span class="accent">Progressive</span>
-      <br />JavaScript Framework
+      <span class="accent">Hongbusi</span>
     </h1>
     <p class="description">
       An approachable, performant and versatile framework for building web
@@ -29,60 +22,34 @@ import SponsorsGroup from './SponsorsGroup.vue';
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">Install</a>
     </p>
   </section>
 
-  <!-- TODO make dynamic based on data -->
   <section id="special-sponsor">
-    <span>Special Sponsor</span>
-    <a href="#">
-      <picture>
-        <source type="image/avif" srcset="/images/sponsors/hbuilder.avif" />
-        <img
-          alt="hbuilder logo"
-          width="97"
-          height="36"
-          src="/images/sponsors/hbuilder.png"
-        />
-      </picture>
-    </a>
-    <span>Advanced IDE for Vue</span>
+    <span>The more you know, the more you don't know.</span>
   </section>
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>Approachable</h2>
-      <p>
-        Builds on top of standard HTML, CSS and JavaScript with intuitive
-        API and world-class documentation.
-      </p>
+      <h2>A Blog</h2>
+      <p>专注前端，记录日常所得。</p>
     </div>
     <div class="vt-box">
-      <h2>Performant</h2>
-      <p>
-        Truly reactive, compiler-optimized rendering system that rarely
-        requires manual optimization.
-      </p>
+      <h2>For Me</h2>
+      <p>桃李不言，下自成蹊！</p>
     </div>
     <div class="vt-box">
-      <h2>Versatile</h2>
-      <p>
-        A rich, incrementally adoptable ecosystem that scales between a
-        library and a full-featured framework.
-      </p>
+      <h2>For Future</h2>
+      <p>不登高山，不知天之大；不临深谷，不知地之厚也。</p>
     </div>
   </section>
 
-  <section id="sponsors">
-    <h2>Platinum Sponsors</h2>
-    <SponsorsGroup tier="platinum" placement="landing" />
-    <h2>Gold Sponsors</h2>
-    <SponsorsGroup tier="gold" placement="landing" />
-  </section>
-
-  <NewsLetter />
+  <FriendlyLink />
 </template>
+
+<script setup lang="ts">
+import FriendlyLink from './FriendlyLink.vue';
+</script>
 
 <style scoped>
 section {
@@ -163,15 +130,6 @@ html:not(.dark) .accent,
   background-color: var(--vt-c-green-light);
 }
 
-.actions .setup {
-  color: var(--vt-c-text-code);
-}
-
-.actions .setup:hover {
-  background-color: var(--vt-c-gray-light-4);
-  transition-duration: 0.2s;
-}
-
 .dark .actions .setup:hover {
   background-color: var(--vt-c-gray-dark-3);
 }
@@ -188,7 +146,6 @@ html:not(.dark) .accent,
   font-weight: 500;
   font-size: 13px;
   vertical-align: middle;
-  margin: 0 24px;
 }
 
 #special-sponsor img {
