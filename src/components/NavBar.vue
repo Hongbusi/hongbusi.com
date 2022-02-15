@@ -32,10 +32,10 @@ import { isDark } from '/~/logics'
         <router-link to="/notes" title="Notes">
           <ri-sticky-note-line />
         </router-link>
-        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter">
+        <a href="https://twitter.com/Hongbusi" target="_blank" title="Twitter">
           <feather-twitter />
         </a>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub">
+        <a href="https://github.com/Hongbusi" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
