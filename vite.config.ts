@@ -34,8 +34,8 @@ import 'prismjs/components/prism-jsdoc'
 const config: UserConfig = {
   resolve: {
     alias: [
-      { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` },
-    ],
+      { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` }
+    ]
   },
   optimizeDeps: {
     include: [
@@ -43,15 +43,15 @@ const config: UserConfig = {
       'vue-router',
       '@vueuse/core',
       'dayjs',
-      'dayjs/plugin/localizedFormat',
-    ],
+      'dayjs/plugin/localizedFormat'
+    ]
   },
   plugins: [
     Unocss({
       theme: {
         fontFamily: {
-          sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
-        },
+          sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji'
+        }
       },
       presets: [
         presetIcons({
@@ -59,16 +59,16 @@ const config: UserConfig = {
             'display': 'inline-block',
             'height': '1.2em',
             'width': '1.2em',
-            'vertical-align': 'text-bottom',
-          },
+            'vertical-align': 'text-bottom'
+          }
         }),
         presetAttributify(),
-        presetUno(),
-      ],
+        presetUno()
+      ]
     }),
 
     Vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/]
     }),
 
     Pages({
@@ -84,7 +84,7 @@ const config: UserConfig = {
         }
 
         return route
-      },
+      }
     }),
 
     Markdown({
@@ -92,7 +92,7 @@ const config: UserConfig = {
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItOptions: {
-        quotes: '""\'\'',
+        quotes: '""\'\''
       },
       markdownItSetup(md) {
         md.use(Prism)
@@ -100,8 +100,8 @@ const config: UserConfig = {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({
             symbol: '#',
-            renderAttrs: () => ({ 'aria-hidden': 'true' }),
-          }),
+            renderAttrs: () => ({ 'aria-hidden': 'true' })
+          })
         })
 
         // @ts-expect-error anyway
@@ -109,15 +109,15 @@ const config: UserConfig = {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
-            rel: 'noopener',
-          },
+            rel: 'noopener'
+          }
         })
 
         md.use(TOC, {
           includeLevel: [1, 2, 3],
-          slugify,
+          slugify
         })
-      },
+      }
     }),
 
     AutoImport({
@@ -125,8 +125,8 @@ const config: UserConfig = {
         'vue',
         'vue-router',
         '@vueuse/core',
-        '@vueuse/head',
-      ],
+        '@vueuse/head'
+      ]
     }),
 
     Components({
@@ -135,17 +135,17 @@ const config: UserConfig = {
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [
         IconsResolver({
-          componentPrefix: '',
-        }),
-      ],
+          componentPrefix: ''
+        })
+      ]
     }),
 
     Inspect(),
 
     Icons({
       defaultClass: 'inline',
-      defaultStyle: 'vertical-align: sub;',
-    }),
+      defaultStyle: 'vertical-align: sub;'
+    })
   ],
 
   build: {
@@ -153,14 +153,14 @@ const config: UserConfig = {
       onwarn(warning, next) {
         if (warning.code !== 'UNUSED_EXTERNAL_IMPORT')
           next(warning)
-      },
-    },
+      }
+    }
   },
 
   ssgOptions: {
     formatting: 'minify',
-    format: 'cjs',
-  },
+    format: 'cjs'
+  }
 }
 
 export default config

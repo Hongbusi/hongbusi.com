@@ -23,7 +23,7 @@ const routes = autoRoutes.map((i) => {
     ...i,
     alias: i.path.endsWith('/')
       ? `${i.path}index.html`
-      : `${i.path}.html`,
+      : `${i.path}.html`
   }
 })
 
@@ -44,5 +44,5 @@ export const createApp = ViteSSG(
       router.beforeEach(() => { NProgress.start() })
       router.afterEach(() => { NProgress.done() })
     }
-  },
+  }
 )

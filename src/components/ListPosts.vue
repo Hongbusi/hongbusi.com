@@ -12,7 +12,7 @@ const routes = router.getRoutes()
   .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
 
 const posts = computed(() =>
-  routes.filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type),
+  routes.filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type)
 )
 </script>
 

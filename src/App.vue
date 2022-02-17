@@ -13,7 +13,7 @@ useHead({
     { property: 'og:image', content: 'https://antfu.me/avatar.png' },
     { name: 'description', content: 'Hongbusi\'s Portfolio' },
     { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:creator', content: '@Hongbusi' },
-  ],
+    { name: 'twitter:creator', content: '@Hongbusi' }
+  ]
 })
 </script>

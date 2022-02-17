@@ -7,7 +7,7 @@ export function getStarsRankingUrl() {
     'type-challenges',
     'unocss',
     'vitest-dev',
-    'vue-reactivity',
+    'vue-reactivity'
   ]
   const repos = [
     'lokalise/i18n-ally',
@@ -24,12 +24,12 @@ export function getStarsRankingUrl() {
     'wenyan-lang/ide',
     'wenyan-lang/wenyan',
     'wenyan-lang/wyg',
-    'windicss/vite-plugin-windicss',
+    'windicss/vite-plugin-windicss'
   ]
 
   const query = [
     ...users.map(i => `user:${i}`),
-    ...repos.map(i => `repo:${i}`),
+    ...repos.map(i => `repo:${i}`)
   ].join(' ')
 
   const url = `https://github.com/search?l=&o=desc&s=stars&type=Repositories&q=${encodeURIComponent(query)}`

@@ -14,7 +14,7 @@ async function run() {
       type: 'owner',
       username: 'antfu',
       per_page: 100,
-      page: i,
+      page: i
     })
 
     for (const repo of repos) {

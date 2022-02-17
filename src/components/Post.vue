@@ -4,8 +4,8 @@ import { formatDate } from '/~/logics'
 defineProps({
   frontmatter: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 })
 
 const router = useRouter()
@@ -21,7 +21,7 @@ onMounted(() => {
   }
 
   const handleAnchors = (
-    event: MouseEvent & { target: HTMLElement },
+    event: MouseEvent & { target: HTMLElement }
   ) => {
     const link = event.target.closest('a')
 

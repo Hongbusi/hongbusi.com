@@ -4,7 +4,7 @@ overrides:
   '@vueuse/head': 0.7.0
 
 specifiers:
-  '@hongbusi/eslint-config': 0.1.1
+  '@hongbusi/eslint-config': 0.1.2
   '@iconify/json': ^2.0.35
   '@octokit/rest': ^18.12.0
   '@types/diacritics': ^1.3.1
@@ -61,7 +61,7 @@ dependencies:
   vue-router: 4.0.12_vue@3.2.30
 
 devDependencies:
-  '@hongbusi/eslint-config': 0.1.1_eslint@8.8.0+typescript@4.5.5
+  '@hongbusi/eslint-config': 0.1.2_eslint@8.8.0+typescript@4.5.5
   '@iconify/json': 2.0.35
   '@octokit/rest': 18.12.0
   '@types/diacritics': 1.3.1
@@ -1256,8 +1256,8 @@ packages:
       - supports-color
     dev: true
 
-  /@hongbusi/eslint-config-basic/0.1.0_eslint@8.8.0:
-    resolution: {integrity: sha512-3KMo/BcVybHV9zfu2BBlUXH0CAV/eqkjA8lxLhgBJTkXBJEsBLo+AHGf0BZZdiAP2C2SCMKyYnErDEthmHvwgg==}
+  /@hongbusi/eslint-config-basic/0.1.2_eslint@8.8.0:
+    resolution: {integrity: sha512-+po9vQhtmmxh0fTQ6qZG6KWMvPfqxRojIJNdOzOQb+5gMZYIxHWtOYof9L9LVw+RWaaCDJQVPu9Se6NplBn9Bw==}
     dependencies:
       eslint-config-standard: 17.0.0-1_d98185a972f50d26baaf376f983a6b27
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.8.0
@@ -1275,10 +1275,10 @@ packages:
       - supports-color
     dev: true
 
-  /@hongbusi/eslint-config-react/0.1.0_eslint@8.8.0+typescript@4.5.5:
-    resolution: {integrity: sha512-KCoEpoUDXORgTQjnhwZb/2uLD5SD4o+DRbt5H80VYy3QXllyXcFwEB0S85vYWuEfyvVYgHLiK7YmP4xWgBOn6g==}
+  /@hongbusi/eslint-config-react/0.1.2_eslint@8.8.0+typescript@4.5.5:
+    resolution: {integrity: sha512-AH83AFIWmiPqyvDZYzRHLyNQZ3ylcLupJ2UZq8knrJf3iMT7DnDNlETcsMQgewQHaSn+C+6BFdefDCDDUE1KCg==}
     dependencies:
-      '@hongbusi/eslint-config-ts': 0.1.0_eslint@8.8.0+typescript@4.5.5
+      '@hongbusi/eslint-config-ts': 0.1.2_eslint@8.8.0+typescript@4.5.5
       eslint-plugin-react: 7.28.0_eslint@8.8.0
     transitivePeerDependencies:
       - eslint
@@ -1286,10 +1286,10 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config-ts/0.1.0_eslint@8.8.0+typescript@4.5.5:
-    resolution: {integrity: sha512-LKS3D/84PXBoRDwSipMsQB+RwimsvGoYvDNjMGHvpEEgtlijanX5dziO8GG8QOgzeqFNiIMoxihfzhDnIL7YyQ==}
+  /@hongbusi/eslint-config-ts/0.1.2_eslint@8.8.0+typescript@4.5.5:
+    resolution: {integrity: sha512-as5OiXYGLzniBi0hfl0wZXtxZ2kttPIRdoiuoPLjZO/qnN2DwqeXoSS1kSIFQYRBWODZfoOQintw3BuWJEDl+w==}
     dependencies:
-      '@hongbusi/eslint-config-basic': 0.1.0_eslint@8.8.0
+      '@hongbusi/eslint-config-basic': 0.1.2_eslint@8.8.0
       '@typescript-eslint/eslint-plugin': 5.12.0_a9fa196d38eae5ff07876c7c05f176a5
       '@typescript-eslint/parser': 5.12.0_eslint@8.8.0+typescript@4.5.5
     transitivePeerDependencies:
@@ -1298,10 +1298,10 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config-vue/0.1.0_eslint@8.8.0+typescript@4.5.5:
-    resolution: {integrity: sha512-ffV7xSQU+P/OvheG44P4DmIc6ZaAZrCpkfZx4SbuIvQgzBd1TJU36tK2Igo8SRSqzP/z6a1FPVQEJ+OMz8APLA==}
+  /@hongbusi/eslint-config-vue/0.1.2_eslint@8.8.0+typescript@4.5.5:
+    resolution: {integrity: sha512-sm2xmm3tS0pITmkwyOHhHOCGhhFXfojTfpsOhWqNv86NF/xcOL3FEw0PTxhwgTM6TOl1IeZXQDgJLG4981b22g==}
     dependencies:
-      '@hongbusi/eslint-config-ts': 0.1.0_eslint@8.8.0+typescript@4.5.5
+      '@hongbusi/eslint-config-ts': 0.1.2_eslint@8.8.0+typescript@4.5.5
       eslint-plugin-vue: 8.4.1_eslint@8.8.0
     transitivePeerDependencies:
       - eslint
@@ -1309,11 +1309,11 @@ packages:
       - typescript
     dev: true
 
-  /@hongbusi/eslint-config/0.1.1_eslint@8.8.0+typescript@4.5.5:
-    resolution: {integrity: sha512-NYQBZFdnw/683L+VjX3dPWeHcMbHaYLakueZ6j1AdD8iTK3WcHJYc9NgLmq0pl+YoxeSNn7HpV5nuTpiYSpOhw==}
+  /@hongbusi/eslint-config/0.1.2_eslint@8.8.0+typescript@4.5.5:
+    resolution: {integrity: sha512-1FkbV/Lh0HhSKvRmpe/kRIyN4e5nyRWctuujmlqLQrZXJmF63DJJEXwPzZ2yv4WoWdeN721s8xmEYaX1F7A47g==}
     dependencies:
-      '@hongbusi/eslint-config-react': 0.1.0_eslint@8.8.0+typescript@4.5.5
-      '@hongbusi/eslint-config-vue': 0.1.0_eslint@8.8.0+typescript@4.5.5
+      '@hongbusi/eslint-config-react': 0.1.2_eslint@8.8.0+typescript@4.5.5
+      '@hongbusi/eslint-config-vue': 0.1.2_eslint@8.8.0+typescript@4.5.5
       '@typescript-eslint/eslint-plugin': 5.12.0_a9fa196d38eae5ff07876c7c05f176a5
       '@typescript-eslint/parser': 5.12.0_eslint@8.8.0+typescript@4.5.5
       eslint-config-standard: 17.0.0-1_d98185a972f50d26baaf376f983a6b27

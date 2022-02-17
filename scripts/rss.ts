@@ -11,12 +11,12 @@ const DOMAIN = 'https://antfu.me'
 const AUTHOR = {
   name: 'Anthony Fu',
   email: 'hi@antfu.me',
-  link: DOMAIN,
+  link: DOMAIN
 }
 const markdown = MarkdownIt({
   html: true,
   breaks: true,
-  linkify: true,
+  linkify: true
 })
 
 async function run() {
@@ -36,8 +36,8 @@ async function buildBlogRSS() {
     feedLinks: {
       json: 'https://antfu.me/feed.json',
       atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml',
-    },
+      rss: 'https://antfu.me/feed.xml'
+    }
   }
   const posts: any[] = (
     await Promise.all(
@@ -60,9 +60,9 @@ async function buildBlogRSS() {
             date: new Date(data.date),
             content: html,
             author: [AUTHOR],
-            link: DOMAIN + i.replace(/^pages(.+)\.md$/, '$1'),
+            link: DOMAIN + i.replace(/^pages(.+)\.md$/, '$1')
           }
-        }),
+        })
     ))
     .filter(Boolean)
 
@@ -83,8 +83,8 @@ async function buildNotesRSS() {
     feedLinks: {
       json: 'https://antfu.me/notes/feed.json',
       atom: 'https://antfu.me/notes/feed.atom',
-      rss: 'https://antfu.me/notes/feed.xml',
-    },
+      rss: 'https://antfu.me/notes/feed.xml'
+    }
   }
   const noteMatches = raw.matchAll(/<article>(.*?)<\/article>/gms)
   const notes = []
@@ -105,7 +105,7 @@ async function buildNotesRSS() {
       content,
       link: `${DOMAIN}/notes#${anchor}`,
       lang: 'en',
-      author: [AUTHOR],
+      author: [AUTHOR]
     })
   }
 

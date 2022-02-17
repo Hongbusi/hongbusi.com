@@ -5,7 +5,7 @@
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "redirects": "esno scripts/redirects.ts",
-    "lint": "eslint \"**/*.{vue,ts,js}\""
+    "lint": "eslint \"**/*.{vue,ts,js}\" --fix"
   },
   "eslintConfig": {
     "extends": "@hongbusi"
@@ -20,7 +20,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@hongbusi/eslint-config": "0.1.1",
+    "@hongbusi/eslint-config": "0.1.2",
     "@iconify/json": "^2.0.35",
     "@octokit/rest": "^18.12.0",
     "@types/diacritics": "^1.3.1",
