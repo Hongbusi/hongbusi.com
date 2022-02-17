@@ -5,7 +5,7 @@
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "redirects": "esno scripts/redirects.ts",
-    "lint": "eslint \"**/*.{vue,ts,js}\" --fix"
+    "lint": "eslint \"**/*.{vue,ts,js}\""
   },
   "eslintConfig": {
     "extends": "@hongbusi"
