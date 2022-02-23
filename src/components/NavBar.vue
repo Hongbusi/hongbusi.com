@@ -31,9 +31,6 @@ import { isDark } from '/~/logics'
         <a href="https://github.com/Hongbusi" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
-        <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
-          <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
-        </a>
         <toggle-theme />
       </div>
     </nav>
