@@ -21,7 +21,7 @@ const markdown = MarkdownIt({
 
 async function run() {
   await buildBlogRSS()
-  await buildNotesRSS()
+  // await buildNotesRSS()
 }
 
 async function buildBlogRSS() {
