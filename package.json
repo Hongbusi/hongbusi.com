@@ -12,6 +12,7 @@
   "dependencies": {
     "@vueuse/core": "^7.6.2",
     "dayjs": "^1.10.7",
+    "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },
