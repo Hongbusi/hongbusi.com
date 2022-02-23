@@ -5,3 +5,15 @@
     <Footer />
   </main>
 </template>
+
+<script setup lang="ts">
+useHead({
+  meta: [
+    { property: 'og:title', content: 'Hongbusi' },
+    { property: 'og:image', content: 'https://hongbusi.github.io/avatar.png' },
+    { name: 'description', content: 'Hongbusi\'s Portfolio' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:creator', content: '@Hongbusi' }
+  ]
+})
+</script>

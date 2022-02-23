@@ -5,7 +5,7 @@
   </a>
 </template>
 
-<script setup lang="ts">
+<script setup lang='ts'>
 import { isDark } from '/~/logics'
 
 function toggleDark() {
