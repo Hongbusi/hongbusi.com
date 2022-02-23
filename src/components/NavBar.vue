@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { isDark } from '/~/logics'
+import { isDark } from '/~/logics'
 </script>
 
 <template>
@@ -9,7 +9,7 @@
       to="/"
       focusable="false"
     >
-      <!-- <img :class="{ 'logo-dark': isDark }" src="/logo.png" alt="logo"> -->
+      <img :class="{ 'logo-dark': isDark }" src="/logo.png" alt="logo">
     </router-link>
     <nav class="nav">
       <div class="spacer" />
@@ -34,7 +34,7 @@
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
-        <!-- <toggle-theme /> -->
+        <toggle-theme />
       </div>
     </nav>
   </header>

@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import type { UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
@@ -8,13 +9,19 @@ import Unocss from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
 const config: UserConfig = {
+  resolve: {
+    alias: [
+      { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` }
+    ]
+  },
   plugins: [
     vue(),
 
     AutoImport({
       imports: [
         'vue',
-        'vue-router'
+        'vue-router',
+        '@vueuse/core'
       ]
     }),
 
