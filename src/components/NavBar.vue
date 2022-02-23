@@ -9,8 +9,7 @@ import { isDark } from '/~/logics'
       to="/"
       focusable="false"
     >
-      <img v-show="isDark" src="/logo-dark.svg" alt="logo">
-      <img v-show="!isDark" src="/logo.svg" alt="logo">
+      <img :class="{ 'logo-dark': isDark }" src="/logo.png" alt="logo">
     </router-link>
     <nav class="nav">
       <div class="spacer" />
@@ -50,6 +49,10 @@ import { isDark } from '/~/logics'
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
+}
+
+.logo-dark {
+  border: 1px solid white;
 }
 
 .nav {

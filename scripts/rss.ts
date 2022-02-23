@@ -7,10 +7,10 @@ import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 import { slugify } from './slugify'
 
-const DOMAIN = 'https://antfu.me'
+const DOMAIN = 'https://hongbusi.github.io'
 const AUTHOR = {
-  name: 'Anthony Fu',
-  email: 'hi@antfu.me',
+  name: 'Hongbusi',
+  email: 'coderhbs@gmail.com',
   link: DOMAIN
 }
 const markdown = MarkdownIt({
@@ -28,15 +28,15 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'Anthony Fu',
-    description: 'Anthony Fu\' Blog',
-    id: 'https://antfu.me/',
-    link: 'https://antfu.me/',
-    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
+    title: 'Hongbusi',
+    description: 'Hongbusi\' Blog',
+    id: 'https://hongbusi.github.io',
+    link: 'https://hongbusi.github.io',
+    copyright: 'Copyright © 2019-present Hongbusi',
     feedLinks: {
-      json: 'https://antfu.me/feed.json',
-      atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml'
+      json: 'https://hongbusi.github.io/feed.json',
+      atom: 'https://hongbusi.github.io/feed.atom',
+      rss: 'https://hongbusi.github.io/feed.xml'
     }
   }
   const posts: any[] = (
@@ -75,15 +75,15 @@ async function buildNotesRSS() {
   const raw = await fs.readFile('pages/notes.md', 'utf-8')
 
   const options = {
-    title: 'Anthony Fu\'s Notes',
-    description: 'Anthony Fu\'s Notes',
-    id: 'https://antfu.me/notes',
-    link: 'https://antfu.me/notes',
+    title: 'Hongbusi\'s Notes',
+    description: 'Hongbusi\'s Notes',
+    id: 'https://hongbusi.github.io/notes',
+    link: 'https://hongbusi.github.io/notes',
     copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
     feedLinks: {
-      json: 'https://antfu.me/notes/feed.json',
-      atom: 'https://antfu.me/notes/feed.atom',
-      rss: 'https://antfu.me/notes/feed.xml'
+      json: 'https://hongbusi.github.io/notes/feed.json',
+      atom: 'https://hongbusi.github.io/notes/feed.atom',
+      rss: 'https://hongbusi.github.io/notes/feed.xml'
     }
   }
   const noteMatches = raw.matchAll(/<article>(.*?)<\/article>/gms)
@@ -114,8 +114,8 @@ async function buildNotesRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://antfu.me/avatar.png'
-  options.favicon = 'https://antfu.me/logo.png'
+  options.image = 'https://hongbusi.github.io/avatar.png'
+  options.favicon = 'https://hongbusi.github.io/logo.png'
 
   const feed = new Feed(options)
 
