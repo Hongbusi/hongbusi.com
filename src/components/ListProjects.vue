@@ -16,7 +16,7 @@ defineProps<{ projects: Record<string, any[]> }>()
         target="_blank"
         :class="!item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''"
       >
-        <div v-if="item.icon" class="pt-2 pr-5">
+        <div class="pt-2 pr-5">
           <div class="text-3xl opacity-50" :class="item.icon || 'i-carbon-unknown'" />
         </div>
         <div class="flex-auto">
