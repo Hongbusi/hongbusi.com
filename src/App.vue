@@ -1,6 +1,7 @@
 <template>
-  <div>
-    Hello World
+  <NavBar />
+  <main class="px-7 py-10">
+    <router-view />
     <Footer />
-  </div>
+  </main>
 </template>
