@@ -12,3 +12,7 @@ _2021/03/17_
 [Charles](https://www.charlesproxy.com)
 
 Step: `Help` -> `SSL Proxying` -> `Install Charles Root Certificate on a Mobile Device or Remote Browser`
+
+## View `key`
+
+Mac: `cat ~/.ssh/id_rsa.pub`
