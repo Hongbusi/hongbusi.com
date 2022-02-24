@@ -1,3 +1,5 @@
-**[Hongbusi](https://hongbusi.github.io)**
+# Hongbusi
 
-My personal website powered by [Vite](https://vitejs.dev).
+Forked from [antfu](https://github.com/antfu/antfu.me).
+
+My personal [website](https://hongbusi.github.io) powered by [Vite](https://vitejs.dev).
