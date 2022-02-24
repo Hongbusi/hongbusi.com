@@ -16,13 +16,13 @@ projects:
       desc: 'Let others read high-quality content faster and more accurately.'
       icon: 'i-ep-reading'
     - name: 'Configs'
-      link: 'https://hongbusi.github.io/configs'
+      link: 'https://github.com/Hongbusi/configs'
       desc: 'ESLint config & StyleLint config & Prettier config for my personal projects.'
       icon: 'i-carbon-cloud-satellite-config'
 
   Utils:
     - name: 'Create config'
-      link: 'https://hongbusi.github.io/create-config'
+      link: 'https://github.com/Hongbusi/create-config'
       desc: 'Quickly create project configurations.'
     - name: 'Create app'
       link: 'https://github.com/Hongbusi/create-app'
@@ -34,8 +34,8 @@ projects:
 
   Toys:
     - name: '1990 Script'
-      link: 'https://github.com/antfu/1990-script'
-      desc: 'Make your Github history back to 1990'
+      link: 'https://github.com/Hongbusi/1990-script'
+      desc: 'Make your Github history back to 1990.'
       icon: 'i-carbon-time'
 ---
 
