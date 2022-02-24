@@ -25,6 +25,9 @@ import { isDark } from '/~/logics'
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>
+        <router-link to="/notes" title="Notes">
+          <ri-sticky-note-line />
+        </router-link>
         <a href="https://twitter.com/Hongbusi" target="_blank" title="Twitter">
           <feather-twitter />
         </a>
