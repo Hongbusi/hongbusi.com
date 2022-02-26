@@ -36,6 +36,14 @@ git add .
 git commit -m 'update .gitignore'
 ```
 
+## 修改 `git commit` message
+
+_2021/04/21_
+
+``` bash
+git commit --amend
+```
+
 ## `Charles` proxy
 
 _2021/03/17_
