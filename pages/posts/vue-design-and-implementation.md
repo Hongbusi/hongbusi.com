@@ -12,4 +12,6 @@ zh: 'zh'
 
 ## `forEach` 遍历 `Set` 集合（p55）
 
+[ECMAScript 2020 Language Specification](https://262.ecma-international.org/11.0/#sec-set.prototype.foreach)
+
 在调用 `forEach` 遍历 `Set` 集合时，如果一个值已经被访问过了，但该值被删除并重新添加到集合，如果此时 `forEach` 遍历没有结束，那么该值会重新被访问。解决办法很简单，我们可以构造另一个 `Set` 集合并遍历它。
