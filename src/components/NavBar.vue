@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isDark } from '/~/logics'
+import { isDark } from '~/logics'
 </script>
 
 <template>
@@ -17,6 +17,9 @@ import { isDark } from '/~/logics'
         <router-link to="/posts">
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
+        </router-link>
+        <router-link to="/read" class="lt-md:hidden">
+          <span class="lt-md:hidden">Read</span>
         </router-link>
         <router-link to="/projects">
           <span class="lt-md:hidden">Projects</span>
