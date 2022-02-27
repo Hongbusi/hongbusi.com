@@ -1,7 +1,6 @@
 ---
 title: '`uni-app` 初体验'
 date: '2022-02-24'
-lang: 'zh'
 duration: 5 min
 ---
 
