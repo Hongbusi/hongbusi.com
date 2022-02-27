@@ -5,6 +5,48 @@ date: '2022-02-16'
 
 记录阅读《Vue.js 设计与实现》过程中的收获。<ViewSourceCode link="https://github.com/Hongbusi/code-for-vue3-book" />
 
+## 错误处理（p23）
+
+``` js
+// utils.js
+let handleError = null
+export default {
+  foo(fn) {
+    callWithErrorHandling(fn)
+  },
+
+  bar(fn) {
+    callWithErrorHandling(fn)
+  },
+
+  // 用户可以调用该函数注册统一的错误处理函数
+  registerErrorHandler(fn) {
+    handleError = fn
+  }
+}
+
+function callWithErrorHandling(fn) {
+  try {
+    fn && fn()
+  } catch (e) {
+    handleError && handleError(e)
+  }
+}
+```
+
+``` js
+// input.js
+import utils from './utils.js'
+
+// 注册错误处理程序
+utils.registerErrorHandler((e) => {
+  console.log(e)
+})
+
+utils.foo(() => { /*...*/ })
+utils.bar(() => { /*...*/ })
+```
+
 ## `WeakMap` 和 `Map` 的区别（p48）
 
 `WeakMap` 对 `key` 是弱引用，不影响垃圾回收器的工作。据这个特性可知，一旦 `key` 被垃圾回收器回收，那么对应的键和值就访问不到了。所以 `WeakMap` 经常用于存储那些只有当 `key` 所引用的对象存在时（没有被回收）才有价值的信息，例如上面的场景中，如何 `target` 对象没有任何引用了，说明用户侧不再需要它了，这是垃圾回收器就完成回收任务。但如果使用 `Map` 来代替 `WeakMap`，那么即使用户侧的代码对 `target` 没有任何引用，这个 `target` 也不会被回收，最终可能导致内存溢出。
