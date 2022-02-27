@@ -14,3 +14,27 @@ date: '2022-02-16'
 [ECMAScript 2020 Language Specification](https://262.ecma-international.org/11.0/#sec-set.prototype.foreach)
 
 在调用 `forEach` 遍历 `Set` 集合时，如果一个值已经被访问过了，但该值被删除并重新添加到集合，如果此时 `forEach` 遍历没有结束，那么该值会重新被访问。解决办法很简单，我们可以构造另一个 `Set` 集合并遍历它。
+
+## 过期的副作用函数导致的竞态问题（p79）
+
+``` js
+let finalData
+
+watch(obj, async(newValue, oldValue, onInvalidate) => {
+  // 定义一个标志，代表当前副作用函数是否过期，默认为 `false`，代表没有过期
+  let expired = false
+  // 调用 `onInvalidate()` 函数注册一个过期回调
+  onInvalidate(() => {
+    // 当过期时，将 `expired` 设置为 `false`
+    expired = true
+  })
+
+  // 发送网络请求
+  const res = await fetch('/path/to/request')
+
+  // 只有当该副作用函数的执行没有过期时，才会执行后续操作
+  if (!expired) {
+    finalData = res
+  }
+})
+```
