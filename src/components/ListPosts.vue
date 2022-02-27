@@ -35,7 +35,7 @@ const posts = computed(() =>
 
 <template>
   <ul>
-    <router-link
+    <app-link
       v-for="route in posts"
       :key="route.path"
       class="item block font-normal mb-6 mt-2 no-underline"
@@ -53,6 +53,6 @@ const posts = computed(() =>
           {{ formatDate(route.date) }} <span v-if="route.duration" class="opacity-50">· {{ route.duration }}</span>
         </div>
       </li>
-    </router-link>
+    </app-link>
   </ul>
 </template>
