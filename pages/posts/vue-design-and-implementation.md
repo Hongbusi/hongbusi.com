@@ -3,7 +3,7 @@ title: 'Vue.js 设计与实现'
 date: '2022-02-16'
 ---
 
-记录阅读《Vue.js 设计与实现》过程中的收获。
+记录阅读《Vue.js 设计与实现》过程中的收获。<ViewSourceCode link="https://github.com/Hongbusi/code-for-vue3-book" />
 
 ## `WeakMap` 和 `Map` 的区别（p48）
 
