@@ -120,7 +120,7 @@ public
 }
 ```
 
-注：在 VSCode 中使用需要安装插件 `ESLint`
+注：在 VSCode 中使用需要安装插件 `ESLint`。
 
 ### 解决 `eslint` 和 `prettier` 冲突的问题
 
