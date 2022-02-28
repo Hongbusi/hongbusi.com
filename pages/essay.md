@@ -1,16 +1,26 @@
 ---
 title: 'Essay - Hongbusi'
 display: 'Essay'
-subtitle: 'Personal essay.'
-description: 'Personal essay.'
+subtitle: 'Personal essays and some good points seen.'
+description: 'Personal essays and some good points seen.'
 ---
+
+## 2022-02-18
+
+我觉得，不管多么忙，还是应该留出一点时间，放在自己的兴趣项目上面，哪怕得不到任何结果。原因有两个：
+
+第一个原因，兴趣项目可以大大提升你的技术水平。因为兴趣是最强大的驱动力，比金钱、名位都强大得多，你会愿意钻研技术的细节。很多优秀的开源项目，都来自个人兴趣，质量远胜大公司投入重金做出来的东西。
+
+第二个原因，兴趣项目可以塑造一个人。 很多人没有意识到这一点，一般都是作者塑造作品，但是有些作品可以塑造作者。 你做着做着，变成了跟原来不一样的人。
+许多知名程序员，刚入行时其实都很普通，看不出特别之处，但是他在追求自己兴趣的过程中，逐渐意识到了，自己是什么样的人，想要完成什么，从此找到了自我，全身心投入，成就了一番事业。
+
+有一句话说，“你可以活成自己想要的样子”。这句话的前提是，你得知道那是什么样子。兴趣项目就有这个作用，让你认识自己、塑造自己，壮大追求梦想的决心。
 
 ## 2022-02-12
 
 任何新技术的出现都是为了解决原有技术的某个痛点。
 
-Any application that can be written in JavaScript, will eventually be written in JavaScript.
-——— Jeff Atwood 在 2007 年提出的 Atwood 定律
+Any application that can be written in JavaScript, will eventually be written in JavaScript. ——— Jeff Atwood 在 2007 年提出的 Atwood 定律
 
 ## 2022-01-21
 
