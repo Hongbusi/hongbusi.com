@@ -1,12 +1,12 @@
 ---
-title: 'Project construction'
+title: '项目搭建'
 date: '2021-12-19'
 duration: '20 min'
 ---
 
-## 一、代码规范
+## 代码规范
 
-### 1.1. 集成 `editorconfig` 配置
+### 集成 `editorconfig` 配置
 
 EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。
 
@@ -28,19 +28,19 @@ max_line_length = off
 trim_trailing_whitespace = false
 ```
 
-VSCode 需要安装一个插件：`EditorConfig for VS Code`
+注：在 VSCode 中使用需要安装插件：`EditorConfig for VS Code`。
 
-### 1.2. 使用 `prettier` 工具
+### 使用 `prettier` 工具
 
 Prettier 是一款强大的代码格式化工具，支持 JavaScript、TypeScript、CSS、SCSS、Less、JSX、Angular、Vue、GraphQL、JSON、Markdown 等语言，基本上前端能用到的文件格式它都可以搞定，是当下最流行的代码格式化工具。
 
-1. 安装 prettier
+#### 安装
 
 ``` bash
 yarn add prettier -D
 ```
 
-2. 配置 `.prettierrc` 文件
+#### 创建 `.prettierrc` 配置文件
 
 * useTabs：使用 tab 缩进还是空格缩进，选择 false；
 * tabWidth：tab 是空格的情况下，是几个空格，选择 2 个；
@@ -60,7 +60,7 @@ yarn add prettier -D
 }
 ```
 
-3. 创建 `.prettierignore` 忽略文件
+#### 创建 `.prettierignore` 忽略文件
 
 ```
 /dist/*
@@ -73,9 +73,7 @@ yarn add prettier -D
 /public/*
 ```
 
-4. VSCode 需要安装 `prettier` 的插件
-
-5. 测试 prettier 是否生效
+#### 测试 `prettier` 是否生效
 
 在 package.json 中配置一个 scripts：
 
@@ -83,15 +81,21 @@ yarn add prettier -D
   "prettier": "prettier --write ."
 ```
 
-### 1.3. 使用 `ESLint` 检测
+注：在 VSCode 中使用需要安装插件 `prettier`。
 
-1. Install
+### 使用 `ESLint` 检测
+
+ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。
+
+#### 安装
 
 ``` bash
 yarn add eslint @hongbusi/eslint-config -D
 ```
 
-2. Config `.eslintrc` in package.json
+关于 `@hongbusi/eslint-config` 的更多信息，可查看 <GitHubLink repo="Hongbusi/configs" />。
+
+#### 创建 `.eslintrc` 配置文件
 
 ``` json
 {
@@ -101,14 +105,14 @@ yarn add eslint @hongbusi/eslint-config -D
 }
 ```
 
-3. Config `.eslintignore`
+#### 创建 `.eslintignore` 忽略文件
 
 ```
 dist
 public
 ```
 
-4. Add script for package.json
+#### 在 `package.json` 中添加 script
 
 ``` json
 {
@@ -118,27 +122,24 @@ public
 }
 ```
 
-> 建议不要在使用 eslint 的时候再去使用 prettier。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
+注：在 VSCode 中使用需要安装插件 `ESLint`
 
-想要了解更多可查看 <GitHubLink repo="Hongbusi/configs" />
-
-5. VSCode 需要安装 ESLint 插件
-
-6. 解决 eslint 和 prettier 冲突的问题
+#### 解决 `eslint` 和 `prettier` 冲突的问题
 
 ``` bash
 yarn add eslint-plugin-prettier eslint-config-prettier -D
 ```
 
-添加 prettier 插件：
+添加 `prettier` 插件：
 
 ``` json
 extends: [
   "eslint:recommended",
-  "@vue/prettier",
   "plugin:prettier/recommended"
 ]
 ```
+
+> 建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
 
 ### 1.4. git Husky 和 eslint
 
