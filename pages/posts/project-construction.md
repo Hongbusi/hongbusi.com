@@ -1,12 +1,10 @@
 ---
 title: '项目搭建'
 date: '2021-12-19'
-duration: '20 min'
+duration: '15 min'
 ---
 
-## 代码规范
-
-### 集成 `editorconfig` 配置
+## 集成 `editorconfig` 配置
 
 EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。
 
@@ -30,17 +28,17 @@ trim_trailing_whitespace = false
 
 注：在 VSCode 中使用需要安装插件：`EditorConfig for VS Code`。
 
-### 使用 `prettier` 工具
+## 使用 `prettier` 工具
 
 Prettier 是一款强大的代码格式化工具，支持 JavaScript、TypeScript、CSS、SCSS、Less、JSX、Angular、Vue、GraphQL、JSON、Markdown 等语言，基本上前端能用到的文件格式它都可以搞定，是当下最流行的代码格式化工具。
 
-#### 安装
+### 安装
 
 ``` bash
 yarn add prettier -D
 ```
 
-#### 创建 `.prettierrc` 配置文件
+### 创建 `.prettierrc` 配置文件
 
 * useTabs：使用 tab 缩进还是空格缩进，选择 false；
 * tabWidth：tab 是空格的情况下，是几个空格，选择 2 个；
@@ -60,7 +58,7 @@ yarn add prettier -D
 }
 ```
 
-#### 创建 `.prettierignore` 忽略文件
+### 创建 `.prettierignore` 忽略文件
 
 ```
 /dist/*
@@ -73,7 +71,7 @@ yarn add prettier -D
 /public/*
 ```
 
-#### 测试 `prettier` 是否生效
+### 测试 `prettier` 是否生效
 
 在 package.json 中配置一个 scripts：
 
@@ -83,11 +81,11 @@ yarn add prettier -D
 
 注：在 VSCode 中使用需要安装插件 `prettier`。
 
-### 使用 `ESLint` 检测
+## 使用 `ESLint` 检测
 
 ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。
 
-#### 安装
+### 安装
 
 ``` bash
 yarn add eslint @hongbusi/eslint-config -D
@@ -95,7 +93,7 @@ yarn add eslint @hongbusi/eslint-config -D
 
 关于 `@hongbusi/eslint-config` 的更多信息，可查看 <GitHubLink repo="Hongbusi/configs" />。
 
-#### 创建 `.eslintrc` 配置文件
+### 创建 `.eslintrc` 配置文件
 
 ``` json
 {
@@ -105,14 +103,14 @@ yarn add eslint @hongbusi/eslint-config -D
 }
 ```
 
-#### 创建 `.eslintignore` 忽略文件
+### 创建 `.eslintignore` 忽略文件
 
 ```
 dist
 public
 ```
 
-#### 在 `package.json` 中添加 script
+### 在 `package.json` 中添加 script
 
 ``` json
 {
@@ -124,7 +122,7 @@ public
 
 注：在 VSCode 中使用需要安装插件 `ESLint`
 
-#### 解决 `eslint` 和 `prettier` 冲突的问题
+### 解决 `eslint` 和 `prettier` 冲突的问题
 
 ``` bash
 yarn add eslint-plugin-prettier eslint-config-prettier -D
@@ -141,37 +139,35 @@ extends: [
 
 > 建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
 
-### 1.4. git Husky 和 eslint
+## Husky 和 ESLint
 
-虽然我们已经要求项目使用 eslint了，但是不能保证组员提交代码之前都将eslint中的问题解决掉了：
+虽然我们已经要求项目使用 `eslint` 了，但是不能保证组员提交代码之前都将 `eslint` 中的问题解决掉了：
 
-* 也就是我们希望保证代码仓库中的代码都是符合 eslint 规范的；
-* 那么我们需要在组员执行 `git commit ` 命令的时候对其进行校验，如果不符合 eslint 规范，那么自动通过规范进行修复；
+* 也就是我们希望保证代码仓库中的代码都是符合 `eslint` 规范的；
+* 那么我们需要在组员执行 `git commit` 命令的时候对其进行校验，如果不符合 `eslint` 规范，那么自动通过规范进行修复；
 
 那么如何做到这一点呢？可以通过 Husky 工具：
 
-* husky 是一个 git hook 工具，可以帮助我们触发 git 提交的各个阶段：pre-commit、commit-msg、pre-push
+husky 是一个 git hook 工具，可以帮助我们触发 git 提交的各个阶段：pre-commit、commit-msg、pre-push。
 
 ``` bash
 npx husky-init && npm install
 ```
-### 1.5. git commit 规范
-
-#### 1.5.1. 代码提交风格
+## git commit 规范
 
 通常我们的 git commit 会按照统一的风格来提交，这样可以快速定位每次提交的内容，方便之后对版本进行控制。
 
-但是如果每次手动来编写这些是比较麻烦的事情，我们可以使用一个工具：Commitizen
+但是如果每次手动来编写这些是比较麻烦的事情，我们可以使用一个工具：Commitizen。
 
-* Commitizen 是一个帮助我们编写规范 commit message 的工具；
+Commitizen 是一个帮助我们编写规范 commit message 的工具。
 
-1. 安装 Commitizen
+### 安装 Commitizen
 
 ``` bash
 yarn add commitizen -D
 ```
 
-2. 安装 cz-conventional-changelog，并且初始化 cz-conventional-changelog
+### 安装 cz-conventional-changelog，并且初始化 cz-conventional-changelog
 
 ``` bash
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
@@ -195,19 +191,19 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 | chore    | 变更构建流程或辅助工具（比如更改测试环境）                     |
 | revert   | 代码回退                                                     |
 
-#### 1.5.2. 代码提交验证
+### 代码提交验证
 
 如果我们按照 cz 来规范了提交风格，但是依然有同事通过 `git commit` 按照不规范的格式提交应该怎么办呢？
 
-* 我们可以通过 commitlint 来限制提交；
+我们可以通过 commitlint 来限制提交。
 
-1.安装 @commitlint/config-conventional 和 @commitlint/cli
+#### 安装 @commitlint/config-conventional 和 @commitlint/cli
 
 ``` bash
 yarn add @commitlint/config-conventional @commitlint/cli -D
 ```
 
-2.在根目录创建 commitlint.config.js 文件，配置 commitlint
+#### 在根目录创建 commitlint.config.js 文件，配置 commitlint
 
 ``` js
 module.exports = {
@@ -215,7 +211,7 @@ module.exports = {
 }
 ```
 
-3.使用 husky 生成 commit-msg 文件，验证提交信息
+#### 使用 husky 生成 commit-msg 文件，验证提交信息
 
 ``` bash
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
