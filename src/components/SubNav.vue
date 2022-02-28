@@ -4,9 +4,6 @@
       <router-link to="/posts" class="!border-none !font-400" :class="route.path === '/posts' ? '' : inactiveStyle">
         Blog
       </router-link>
-      <router-link to="/read" class="!border-none !font-400" :class="route.path === '/read' ? '' : inactiveStyle">
-        Read
-      </router-link>
     </div>
   </div>
 </template>

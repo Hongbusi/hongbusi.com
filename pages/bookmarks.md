@@ -4,6 +4,12 @@ display: Bookmarks
 subtitle: Some of my favorite websites/tools with excellent design and UX that I highly recommend.
 ---
 
+### Recommended reading
+
+- [ByteTalk #6 - 跟 Anthony Fu 聊聊全职开源和他的故事](https://bytetalk.fm/posts/episode-6)
+- [前端面试之彻底搞懂 this 指向](https://mp.weixin.qq.com/s/hYm0JgBI25grNG_2sCRlTA)
+- [程序员如何优雅的挣零花钱？](https://howto-make-more-money-easychen.vercel.app)
+
 ### Utils
 
 - [Clock](https://hongbusi.github.io/clock)
@@ -42,7 +48,3 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 - [vue-cropperjs](https://github.com/Agontuk/vue-cropperjs)
 - [vuepress-next](https://github.com/vuepress/vuepress-next)
 - [vue-tour](https://github.com/pulsardev/vue-tour)
-
-### Recommended reading
-
-- [程序员如何优雅的挣零花钱？](https://howto-make-more-money-easychen.vercel.app)
