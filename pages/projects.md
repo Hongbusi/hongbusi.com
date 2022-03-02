@@ -5,9 +5,6 @@ subtitle: List of projects that I am proud of.
 description: List of projects that I am proud of.
 projects:
   Latest:
-    - name: 'hbs-design'
-      link: 'https://github.com/Hongbusi/vue-components'
-      desc: 'A component library for Vue 3.'
     - name: 'vue-element-admin'
       link: 'https://github.com/Hongbusi/vue-element-admin'
       desc: 'A vue content management system.'
@@ -31,12 +28,6 @@ projects:
       link: 'https://hongbusi.github.io/clock'
       desc: 'A clock.'
       icon: 'i-bi-clock'
-
-  Toys:
-    - name: '1990 Script'
-      link: 'https://github.com/Hongbusi/1990-script'
-      desc: 'Make your Github history back to 1990.'
-      icon: 'i-carbon-time'
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
