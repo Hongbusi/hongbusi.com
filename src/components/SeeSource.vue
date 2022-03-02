@@ -4,11 +4,11 @@ defineProps<{ link: string }>()
 
 <template>
   <span>
-    <bi-code-slash class="inline-block opacity-70" />
+    <carbon-logo-github class="inline-block opacity-70" />
     <a
       class="opacity-50 ml-1"
       :href="link"
       target="_blank"
-    >View source code</a>
+    >See source</a>
   </span>
 </template>

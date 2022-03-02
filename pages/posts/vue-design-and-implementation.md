@@ -3,7 +3,7 @@ title: 'Vue.js 设计与实现'
 date: '2022-02-16'
 ---
 
-记录阅读《Vue.js 设计与实现》过程中的收获。<ViewSourceCode link="https://github.com/Hongbusi/code-for-vue3-book" />
+记录阅读《Vue.js 设计与实现》过程中的收获。<SeeSource link="https://github.com/Hongbusi/code-for-vue3-book" />
 
 ## 错误处理（p23）
 
