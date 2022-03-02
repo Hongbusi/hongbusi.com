@@ -18,7 +18,7 @@ import { isDark } from '~/logics'
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
         </router-link>
-        <a href="https://hongbusi.github.io/docs">
+        <a href="https://hongbusi.github.io/docs" target="_blank">
           <span class="lt-md:hidden">Docs</span>
           <ri-sticky-note-line class="md:hidden" />
         </a>
