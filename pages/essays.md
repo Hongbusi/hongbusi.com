@@ -20,6 +20,8 @@ description: 'Personal essays and some good points seen.'
 
 任何新技术的出现都是为了解决原有技术的某个痛点。
 
+---
+
 Any application that can be written in JavaScript, will eventually be written in JavaScript. ——— Jeff Atwood 在 2007 年提出的 Atwood 定律
 
 ## 2022-01-21
