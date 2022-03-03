@@ -9,6 +9,6 @@ defineProps<{ link: string }>()
       class="opacity-50 ml-1"
       :href="link"
       target="_blank"
-    >See source</a>
+    >View source</a>
   </span>
 </template>
