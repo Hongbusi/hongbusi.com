@@ -27,7 +27,7 @@ projects:
     - name: 'Clock'
       link: 'https://hongbusi.github.io/clock'
       desc: 'A clock.'
-      icon: 'i-bi-clock'
+      icon: 'i-carbon-time'
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
