@@ -5,6 +5,14 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-03-04
+
+不要把政治带进开源项目。
+
+> As an individual, I deeply sympathize with what the Ukrainian people are going through and wish nothing but peace and safety for Ukraine. I have personally expressed support on Twitter, and many Vue team / community members have done the same. However, I do not want Vue, an OSS project, to become a vehicle for political messages. We will do what we can as individuals, but not under the name of the project. <ViewSource link="https://github.com/vuejs/vue/pull/12483#issuecomment-1054966381" />
+
+愿世界没有战争。
+
 ## 2022-02-18
 
 我觉得，不管多么忙，还是应该留出一点时间，放在自己的兴趣项目上面，哪怕得不到任何结果。原因有两个：
