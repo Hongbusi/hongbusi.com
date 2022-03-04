@@ -18,4 +18,4 @@ The goal is to be a [Vue.js](https://github.com/vuejs) contributor, not just bec
 
 Find me on [GitHub](https://github.com/Hongbusi), [Twitter](https://www.twitter.com/Hongbusi), mail me at [coderhbs@gmail.com](mailto:coderhbs@gmail.com).
 
-Thanks for reading, see you next time :)
+Thanks for reading, see you next time!
