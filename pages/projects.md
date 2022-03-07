@@ -19,6 +19,11 @@ projects:
       desc: 'Let others read high-quality content faster and more accurately.'
       icon: 'i-ep-reading'
 
+  VS Code Extensions:
+    - name: 'Code Snippets'
+      link: 'https://github.com/Hongbusi/code-snippets'
+      desc: 'Code snippets for vscode.'
+
   Utils:
     - name: 'Configs'
       link: 'https://github.com/Hongbusi/configs'
