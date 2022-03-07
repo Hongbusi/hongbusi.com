@@ -12,6 +12,9 @@ projects:
     - name: 'vue-element-admin'
       link: 'https://github.com/Hongbusi/vue-element-admin'
       desc: 'A vue content management system.'
+    - name: 'Code Snippets'
+      link: 'https://github.com/Hongbusi/code-snippets'
+      desc: 'Code snippets for vscode.'
 
   Sites:
     - name: 'Daily reading'
