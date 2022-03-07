@@ -23,3 +23,5 @@ duration: '10 min'
 - Tailwind CSS IntelliSense
 
 - Auto Rename Tag
+
+- Hongbusi.codesnippet
