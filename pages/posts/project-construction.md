@@ -2,6 +2,7 @@
 title: '项目搭建'
 date: '2021-12-19'
 duration: '15 min'
+lang: 'zh'
 ---
 
 ## 集成 `editorconfig` 配置
