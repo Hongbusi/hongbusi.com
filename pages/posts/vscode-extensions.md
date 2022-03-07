@@ -1,6 +1,7 @@
 ---
-title: 'VS Code Extensions Collection'
-date: '2022-02-24'
+title: 'VS Code Extensions Recommends'
+date: '2021-06-24'
+duration: '10 min'
 ---
 
 - Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code

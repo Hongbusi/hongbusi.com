@@ -1,5 +1,5 @@
 ---
-title: 'My first vscode extension'
+title: 'My First VS Code Extension'
 date: '2022-03-07'
 duration: '15 min'
 ---
