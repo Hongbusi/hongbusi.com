@@ -45,9 +45,9 @@ const posts = computed(() =>
         <div class="title text-lg">
           {{ route.title }}
           <sup
-            v-if="route.lang === 'zh'"
+            v-if="route.lang === 'en'"
             class="text-xs border border-current rounded px-1 pb-0.2"
-          >中文</sup>
+          >English</sup>
         </div>
         <div class="time opacity-50 text-sm -mt-1">
           {{ formatDate(route.date) }} <span v-if="route.duration" class="opacity-50">· {{ route.duration }}</span>

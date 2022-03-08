@@ -2,6 +2,7 @@
 title: 'My First VS Code Extension'
 date: '2022-03-07'
 duration: '15 min'
+lang: 'en'
 ---
 
 <GitHubLink repo="Hongbusi/code-snippets" />
