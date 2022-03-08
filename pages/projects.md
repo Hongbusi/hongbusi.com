@@ -19,9 +19,9 @@ projects:
       icon: 'i-ep-reading'
 
   VS Code Extensions:
-    - name: 'Code Snippets'
+    - name: 'Frontend Code Snippets'
       link: 'https://github.com/Hongbusi/code-snippets'
-      desc: 'Code snippets for vscode.'
+      desc: 'Frontend code snippets for vscode.'
 
   Utils:
     - name: 'Configs'
