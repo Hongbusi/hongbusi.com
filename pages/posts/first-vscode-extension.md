@@ -101,7 +101,7 @@ vsce publish
 # ERROR The Extension Id already exist in the Marketplace. Please use the different Id.
 ```
 
-## Write at the end
+## End
 
 VS Code already has a lot of great code snippets extensions, why spend time making your own code snippets extensions?
 
