@@ -24,4 +24,4 @@ duration: '5 min'
 
 - Auto Rename Tag
 
-- Hongbusi.codesnippet
+- Frontend Code Snippets (Hongbusi.frontend-code-snippets)
