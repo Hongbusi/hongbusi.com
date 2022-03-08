@@ -5,16 +5,12 @@ subtitle: List of projects that I am proud of.
 description: List of projects that I am proud of.
 projects:
   Latest:
-    - name: 'learn-javascript'
-      link: 'https://github.com/Hongbusi/learn-javascript'
-      desc: '手写 JS 中 String、Array、Object 的方法。'
-      icon: 'i-system-uicons-write'
-    - name: 'vue-element-admin'
-      link: 'https://github.com/Hongbusi/vue-element-admin'
-      desc: 'A vue content management system.'
     - name: 'Code Snippets'
       link: 'https://github.com/Hongbusi/code-snippets'
       desc: 'Code snippets for vscode.'
+    - name: 'vue-element-admin'
+      link: 'https://github.com/Hongbusi/vue-element-admin'
+      desc: 'A vue content management system.'
 
   Sites:
     - name: 'Daily reading'
