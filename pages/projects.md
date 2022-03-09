@@ -13,10 +13,17 @@ projects:
       desc: 'A vue content management system.'
 
   Sites:
+    - name: 'vue-element-admin'
+      link: 'https://github.com/Hongbusi/vue-element-admin'
+      desc: 'A vue content management system.'
     - name: 'Daily reading'
       link: 'https://hongbusi.github.io/daily-reading'
       desc: 'Let others read high-quality content faster and more accurately.'
       icon: 'i-ep-reading'
+    - name: 'Clock'
+      link: 'https://hongbusi.github.io/clock'
+      desc: 'A clock.'
+      icon: 'i-carbon-time'
 
   VS Code Extensions:
     - name: 'Code Snippets'
@@ -34,10 +41,6 @@ projects:
     - name: 'Create app'
       link: 'https://github.com/Hongbusi/create-app'
       desc: 'Quickly create projects through templates.'
-    - name: 'Clock'
-      link: 'https://hongbusi.github.io/clock'
-      desc: 'A clock.'
-      icon: 'i-carbon-time'
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
