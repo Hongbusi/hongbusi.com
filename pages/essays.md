@@ -5,6 +5,16 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-03-11
+
+你是在什么时候感觉到英语不好的痛苦？
+
+- 想要了解更多关于 `vuejs` 社区发展方向（`vuejs/rfcs`）；
+- 阅读英语文档；
+- 在 GitHub 上与别人交流；
+
+要花时间学英语了！！！
+
 ## 2022-03-04
 
 不要把政治带进开源项目。
