@@ -1,5 +1,5 @@
 ---
-title: '项目搭建规范'
+title: '项目搭建'
 date: '2021-12-19'
 duration: '15 min'
 ---
@@ -26,7 +26,7 @@ max_line_length = off
 trim_trailing_whitespace = false
 ```
 
-在 VSCode 中使用需要安装插件：`editorconfig.editorconfig`。
+在 VSCode 中使用需要安装插件：[EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)。
 
 ## 二、使用 `prettier` 工具
 
@@ -79,7 +79,7 @@ yarn add prettier -D
   "prettier": "prettier --write ."
 ```
 
-在 VSCode 中使用需要安装插件 `esbenp.prettier-vscode`。
+在 VSCode 中使用需要安装插件 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)。
 
 ## 三、使用 `ESLint` 检测
 
@@ -120,9 +120,22 @@ public
 }
 ```
 
-在 VSCode 中使用需要安装插件 `dbaeumer.vscode-eslint`。
+在 VSCode 中使用需要安装插件 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
 
-### 5. 解决 `eslint` 和 `prettier` 冲突的问题
+### 5. 配合 `husky` 进行校验
+
+虽然我们已经要求项目使用 `eslint` 了，但是不能保证组员提交代码之前都将 `eslint` 中的问题解决掉了。也就是我们希望保证代码仓库中的代码都是符合 `eslint` 规范的。
+
+那么如何做到这一点呢？可以通过 Husky 工具：
+
+husky 是一个 git hook 工具，可以帮助我们触发 git 提交的各个阶段：pre-commit、commit-msg、pre-push。
+
+``` bash
+npx husky-init && npm install
+npx husky add .husky/pre-commit "yarn lint --edit $1"
+```
+
+### 6. 解决 `eslint` 和 `prettier` 冲突的问题
 
 ``` bash
 yarn add eslint-plugin-prettier eslint-config-prettier -D
@@ -138,19 +151,6 @@ extends: [
 ```
 
 > 建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
-
-### 6. husky
-
-虽然我们已经要求项目使用 `eslint` 了，但是不能保证组员提交代码之前都将 `eslint` 中的问题解决掉了。也就是我们希望保证代码仓库中的代码都是符合 `eslint` 规范的。
-
-那么如何做到这一点呢？可以通过 Husky 工具：
-
-husky 是一个 git hook 工具，可以帮助我们触发 git 提交的各个阶段：pre-commit、commit-msg、pre-push。
-
-``` bash
-npx husky-init && npm install
-npx husky add .husky/commit-msg "npx --no-install lint --edit $1"
-```
 
 ## 四、git commit 规范
 
@@ -189,28 +189,24 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 | chore    | 变更构建流程或辅助工具（比如更改测试环境）                     |
 | revert   | 代码回退                                                     |
 
-## 五、git commit 提交验证
+### 3. 结合 husky 校验
 
-如果我们按照 cz 来规范了提交风格，但是依然有同事通过 `git commit` 按照不规范的格式提交应该怎么办呢？
+如果我们按照 cz 来规范了提交风格，但是依然可以通过 `git commit` 提交不规范的格式。
 
-我们可以通过 commitlint 来限制提交。
-
-#### 1. 安装
+我们可以通过 commitlint 来限制提交：
 
 ``` bash
+# 安装依赖
 yarn add @commitlint/config-conventional @commitlint/cli -D
-```
 
-#### 2. 在根目录创建 commitlint.config.js 文件，配置 commitlint
+# 在根目录创建 commitlint.config.js 文件，配置 commitlint
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 
-``` js
-module.exports = {
-  extends: ['@commitlint/config-conventional']
-}
-```
+# 如果已经初始化过 husky，可以忽略
+npx husky-init && npm install
 
-#### 3. 使用 husky 生成 commit-msg 文件，验证提交信息
-
-``` bash
+# 使用 husky 生成 commit-msg 文件，验证提交信息
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
 ```
+
+感谢阅读，下次再见。
