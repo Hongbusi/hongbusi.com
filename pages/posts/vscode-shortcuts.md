@@ -1,5 +1,5 @@
 ---
-title: 'VS Code 快捷键'
+title: 'VS Code 快捷键（Mac）'
 date: '2022-03-13'
 duration: '10 min'
 ---
