@@ -163,13 +163,20 @@ Commitizen 是一个帮助我们编写规范 commit message 的工具。
 ### 1. 安装
 
 ``` bash
-yarn add commitizen -D
-
-# 安装 cz-conventional-changelog，并且初始化 cz-conventional-changelog
-npx commitizen init cz-conventional-changelog --save-dev --save-exact
+yarn add commitizen cz-conventional-changelog -D
 ```
 
-### 2.使用
+### 2. 将 `config.commitizen` 键添加到 `package.json` 文件的根目录，如下所示：
+
+``` json
+"config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
+}
+```
+
+### 3.使用
 
 这个时候我们提交代码需要使用 `npx cz`：
 
