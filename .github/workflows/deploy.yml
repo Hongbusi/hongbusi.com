@@ -1,35 +1,50 @@
-name: deploy
+name: Deploy
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
-  docs:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        os: [ubuntu-latest]
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/cache@v2
         with:
-          node-version: '14'
+          path: |
+            ~/.cache
+          key: cypress-cache-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.1
 
-      - name: Install dependencies
-        run: pnpm i
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - run: pnpm install
 
       - name: Lint
         run: pnpm run lint
 
       - name: Build
-        run: pnpm build
+        run: pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
