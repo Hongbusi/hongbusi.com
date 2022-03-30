@@ -5,17 +5,20 @@ subtitle: List of projects that I am proud of.
 description: List of projects that I am proud of.
 projects:
   Latest:
-    - name: 'Code Snippets'
-      link: 'https://github.com/Hongbusi/code-snippets'
-      desc: 'Code snippets for vscode.'
-    - name: 'vue-element-admin'
-      link: 'https://github.com/Hongbusi/vue-element-admin'
-      desc: 'A vue content management system.'
+    - name: 'bookmarks'
+      link: 'https://hongbusi.github.io/bookmarks'
+      desc: 'Bookmarks for Frontend Developers.'
+    - name: 'vue-hbs-admin'
+      link: 'https://hongbusi.github.io/vue-hbs-admin'
+      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript. It's fast!'
 
   Sites:
-    - name: 'vue-element-admin'
-      link: 'https://github.com/Hongbusi/vue-element-admin'
-      desc: 'A vue content management system.'
+    - name: 'vue-hbs-admin'
+      link: 'https://hongbusi.github.io/vue-hbs-admin'
+      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript. It's fast!'
+    - name: 'bookmarks'
+      link: 'https://hongbusi.github.io/bookmarks'
+      desc: 'Bookmarks for Frontend Developers.'
     - name: 'Daily reading'
       link: 'https://hongbusi.github.io/daily-reading'
       desc: 'Let others read high-quality content faster and more accurately.'
