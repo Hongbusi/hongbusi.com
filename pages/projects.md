@@ -10,12 +10,12 @@ projects:
       desc: 'Bookmarks for Frontend Developers.'
     - name: 'vue-hbs-admin'
       link: 'https://hongbusi.github.io/vue-hbs-admin'
-      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript. It\'s fast!'
+      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript.'
 
   Sites:
     - name: 'vue-hbs-admin'
       link: 'https://hongbusi.github.io/vue-hbs-admin'
-      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript. It\'s fast!'
+      desc: 'A vue management system. It is based on Vue3, Vite and TypeScript.'
     - name: 'bookmarks'
       link: 'https://hongbusi.github.io/bookmarks'
       desc: 'Bookmarks for Frontend Developers.'
