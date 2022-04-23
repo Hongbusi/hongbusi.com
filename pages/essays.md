@@ -5,6 +5,10 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-04-23
+
+了解真相，你才能获得真正的自由。
+
 ## 2022-03-28
 
 《薛兆丰的经济学课》里有提到过一个小故事。
