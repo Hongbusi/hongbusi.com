@@ -9,6 +9,24 @@ description: 'Personal essays and some good points seen.'
 
 了解真相，你才能获得真正的自由。
 
+## 2022-04-08
+
+看似最笨的学习方法（笔记和记忆力），偏偏造就了最高的开发效率。
+
+一个国外开发者的小故事。
+
+他刚入行时，在一家小公司工作。公司只有很少几个工程师，但是每个都很强，了解很多技术，前端、后端、系统维护都能上手。
+
+而且，他们的开发效率极高，别的公司可能花一两个月才能做出的东西，他们几天就能搞出来。不了解内情的客户，会以为他们是一个很大的技术团队，但是其实不到 10 个人。
+
+有一次，这位开发者跟同事单独相处，忍不住就问了，你们的开发效率怎么这么高？
+
+同事解释说，团队的骨干工程师在一起合作多年了，彼此都很了解。他们以前都为军方的情报部门工作，开发军事软件。
+
+军方的计算机是不能连网的，他们的开发环境完全不能上网，所以干活很痛苦。如果他们想在网上查一些软件资料，必须步行到军营外面的另一栋大楼。因此，上网查资料变成了一项成本很高的操作。
+
+他们被逼无奈，只能仔细通读软件手册，把所有重要的内容都做了笔记，尽量记住。久而久之，上网查资料的次数越来越少，知识积累在脑海里，开发效率就这样提高上去了。
+
 ## 2022-03-28
 
 《薛兆丰的经济学课》里有提到过一个小故事。
@@ -18,24 +36,6 @@ description: 'Personal essays and some good points seen.'
 什么意思呢？薛教授举了一个例子。当小孩指着路上的各种车辆问这是什么的时候，父母可以回答「车」，这就完了，对话结束了，这是一种家庭教育。
 
 还有另外一种家庭，他们之间会有往返多次的问答，爸爸会说那是公共汽车、那是垃圾车，那是警车，那是出租车。然后父母还会告诉他们，什么样的人乘坐什么样的车，下次再给他们提问，让他们回忆父母教给他们的知识。
-
-## 2022-03-11
-
-你是在什么时候感觉到英语不好的痛苦？
-
-- 想要了解更多关于 `vuejs` 社区发展方向（`vuejs/rfcs`）；
-- 阅读英语文档；
-- 在 GitHub 上与别人交流；
-
-要花时间学英语了！！！
-
-## 2022-03-04
-
-不要把政治带进开源项目。
-
-> As an individual, I deeply sympathize with what the Ukrainian people are going through and wish nothing but peace and safety for Ukraine. I have personally expressed support on Twitter, and many Vue team / community members have done the same. However, I do not want Vue, an OSS project, to become a vehicle for political messages. We will do what we can as individuals, but not under the name of the project. <ViewSource link="https://github.com/vuejs/vue/pull/12483#issuecomment-1054966381" />
-
-愿世界没有战争。
 
 ## 2022-02-18
 
@@ -52,7 +52,7 @@ description: 'Personal essays and some good points seen.'
 
 任何新技术的出现都是为了解决原有技术的某个痛点。
 
----
+## 2022-02-12
 
 Any application that can be written in JavaScript, will eventually be written in JavaScript. ——— Jeff Atwood 在 2007 年提出的 Atwood 定律
 
