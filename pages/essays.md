@@ -5,6 +5,10 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-05-27
+
+你要学会把代码和你自己分离，不要成为代码的拥有者。你要优化代码，便于其他人找到方法来修复错误和添加功能，把代码的控制权分散。因为你需要解放自己，继续去做下一个项目，否则你将永远无法脱身。
+
 ## 2022-04-23
 
 了解真相，你才能获得真正的自由。
