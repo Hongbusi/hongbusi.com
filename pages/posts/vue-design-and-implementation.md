@@ -4,7 +4,7 @@ date: '2022-02-16'
 duration: '10 min'
 ---
 
-记录阅读《Vue.js 设计与实现》过程中的收获。<ViewSource link="https://github.com/Hongbusi/code-for-vue3-book" />
+阅读《Vue.js 设计与实现》的收获。
 
 ## 错误处理（p23）
 
@@ -85,3 +85,7 @@ watch(obj, async(newValue, oldValue, onInvalidate) => {
 ## 如何区分一个对象是普通对象还是函数呢？一个对象在什么情况下才能被调用呢？（p90）
 
 通过**内部方法**和**内部槽**来区分对象，例如函数对象会部署内部方法 `[[Call]]`，而普通对象则不会。
+
+## 什么是 Diff 算法？（p218）
+
+当新旧 vnode 的子节点都是一个组节点时，为了以最小的性能开销完成更新操作，需要比较两组子节点，用于比较的算法就叫 Diff 算法。我们知道，操作 DOM 的性能开销通常比较大，而渲染器的核心 Diff 算法就是为了解决这个问题而诞生的。
