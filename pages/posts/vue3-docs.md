@@ -31,3 +31,7 @@ date: '2022-06-02'
 ```
 
 上面的例子将会在 DOM 内嵌模板中被转换为 `:[someattr]`。如果你的组件拥有 “someAttr” property 而非 “someattr”，这段代码将不会工作。
+
+## [响应式基础](https://staging-cn.vuejs.org/guide/essentials/reactivity-fundamentals.html)
+
+为保证访问代理的一致性，对同一个对象调用 `reactive()` 会总是返回同样的代理，而对一个已存在代理调用 `reactive()` 也是返回同样的代理。
