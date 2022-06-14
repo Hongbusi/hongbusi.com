@@ -222,7 +222,6 @@ vim 语法：操作符（operation） + 动作（区域范围）
 | `/` + `#`   | 全局：向上查（严格）                             |
 | `/` + `*`   | 全局：向下查（严格）                             |
 
-
 ## 第十一天
 
 | 快捷键        | 描述                          |
@@ -234,3 +233,14 @@ vim 语法：操作符（operation） + 动作（区域范围）
 | `gd`         | 跳转到定位                     |
 | `ctrl` + `i` | 跳转：向后跳                   |
 | `ctrl` + `o` | 跳转：向前跳                   |
+
+## 第十二天
+
+vim-surround
+
+| 快捷键                                  | 描述                                                     |
+| -------------------------------------- | -------------------------------------------------------- |
+| `c` + `s` + `<existing>` + `<desired>` | Change existing surround to desired                      |
+| `y` + `s` + `<motion>` + `<desired>`   | Add desired surround around text defined by              |
+| `d` + `s` + `<existing>`               | Delete existing surround                                 |
+| `S` + `<desired>`                      | Surround when in visual modes (surrounds full selection) |
