@@ -5,6 +5,10 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-06-15
+
+认识到自己无知，才能真正认识世界。
+
 ## 2022-06-13
 
 对于可控的事情要保持谨慎，对于不可控的事情要保持乐观。———— 艾比克泰德
