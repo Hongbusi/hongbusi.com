@@ -244,3 +244,19 @@ vim-surround
 | `y` + `s` + `<motion>` + `<desired>`   | Add desired surround around text defined by              |
 | `d` + `s` + `<existing>`               | Delete existing surround                                 |
 | `S` + `<desired>`                      | Surround when in visual modes (surrounds full selection) |
+
+## 第十三天
+
+1. 替换命令 `:substitute`：
+
+- 公式：`:[range]s[substitute]/{pattern}/{string}/[flags]`
+- rang（范围）:
+    - `$` 到尾部
+    - `%` 全文
+    - `number, number`
+- flag：`g` | `c`
+- 可视化模式下：全部替换
+
+2. 多选操作：`gb`
+
+Adds another cursor on the next word it finds which is the same as the word under the cursor.
