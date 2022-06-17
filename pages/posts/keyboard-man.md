@@ -260,3 +260,16 @@ vim-surround
 2. 多选操作：`gb`
 
 Adds another cursor on the next word it finds which is the same as the word under the cursor.
+
+## 第十四天
+
+| 快捷键 | 描述          |
+| ----- | ------------ |
+| `gh`  | 悬浮显示 hover |
+| `gu`  | Normal：小写  |
+| `gU`  | Normal：大写  |
+| `u`   | 可视化：小写   |
+| `U`   | 可视化：大写   |
+| `~`   | 大小写互换     |
+| `gc`  | 单行注释       |
+| `gC`  | 多行注释       |
