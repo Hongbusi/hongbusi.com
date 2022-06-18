@@ -273,3 +273,14 @@ Adds another cursor on the next word it finds which is the same as the word unde
 | `~`   | 大小写互换     |
 | `gc`  | 单行注释       |
 | `gC`  | 多行注释       |
+
+## 第十五天
+
+| 快捷键                 | 描述                         |
+| --------------------- | ---------------------------  |
+| `ctrl` + `w` + `v`    | 新建窗口：左右                 |
+| `ctrl` + `w` + `s`    | 新建窗口：上下                 |
+| `ctrl` + `w` + `hjkl` | 窗口切换                      |
+| `ctrl` + `w` + `w`    | 窗口切换                      |
+| `ctrl` + `w` + `c`    | 关闭窗口                      |
+| `ctrl` + `w` + `o`    | 只保留当前窗口，关闭其他所有的窗口 |
