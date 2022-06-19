@@ -284,3 +284,14 @@ Adds another cursor on the next word it finds which is the same as the word unde
 | `ctrl` + `w` + `w`    | 窗口切换                      |
 | `ctrl` + `w` + `c`    | 关闭窗口                      |
 | `ctrl` + `w` + `o`    | 只保留当前窗口，关闭其他所有的窗口 |
+
+## 第十六天
+
+删除一个函数：
+
+| 快捷键  | 描述                  |
+| ------ | -------------------  |
+| `%`    | 匹配括号               |
+| `dap`  | 基于段落 text-object   |
+| `dal`  | 基于 vim-indent-object |
+| `V$%d` | 参数多个的话 那么使⽤两次 |
