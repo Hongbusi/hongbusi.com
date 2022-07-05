@@ -5,6 +5,10 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-07-05
+
+不要忽视梦想。不要工作过久。说出想法。交朋友。要开心。
+
 ## 2022-06-15
 
 认识到自己无知，才能真正认识世界。
