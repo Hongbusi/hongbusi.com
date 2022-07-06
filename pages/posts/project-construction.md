@@ -38,6 +38,7 @@ pnpm add husky lint-staged -D
 ### 2. 编辑 package.json，准备脚本并运行一次
 
 ``` bash
+# npm version 7.x
 npm set-script prepare "husky install"
 npm run prepare
 ```
