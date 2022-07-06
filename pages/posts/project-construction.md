@@ -49,7 +49,7 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 ### 1. 安装
 
 ``` bash
-pnpm add -D eslint @hongbusi/eslint-config
+pnpm add eslint @hongbusi/eslint-config -D
 ```
 
 ### 2. 创建 `.eslintrc` 配置文件
