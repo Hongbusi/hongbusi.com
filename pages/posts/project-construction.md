@@ -96,7 +96,7 @@ npx husky add .husky/pre-commit "npx lint-staged"
 
 在 VSCode 中使用需要安装插件 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
 
-## 三、git commit 规范
+## 四、git commit 规范
 
 commitlint 是一个帮助我们编写规范 commit message 的工具。
 
