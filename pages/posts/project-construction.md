@@ -28,58 +28,19 @@ trim_trailing_whitespace = false
 
 在 VSCode 中使用需要安装插件：[EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)。
 
-## 二、使用 `prettier` 工具
-
-Prettier 是一款强大的代码格式化工具，支持 JavaScript、TypeScript、CSS、SCSS、Less、JSX、Angular、Vue、GraphQL、JSON、Markdown 等语言，基本上前端能用到的文件格式它都可以搞定，是当下最流行的代码格式化工具。
+## 二、husky & lint-staged（为后续操作做准备）
 
 ### 1. 安装
+``` bash
+pnpm add husky lint-staged -D
+```
+
+### 2. 编辑 package.json，准备脚本并运行一次
 
 ``` bash
-yarn add prettier -D
+npm set-script prepare "husky install"
+npm run prepare
 ```
-
-### 2. 创建 `.prettierrc` 配置文件
-
-* useTabs：使用 tab 缩进还是空格缩进，选择 false；
-* tabWidth：tab 是空格的情况下，是几个空格，选择 2 个；
-* printWidth：当行字符的长度，推荐 80，也有人喜欢 100 或者 120；
-* singleQuote：使用单引号还是双引号，选择 true，使用单引号；
-* trailingComma：在多行输入的尾逗号是否添加，设置为 `none`；
-* semi：语句末尾是否要加分号，默认值 true，选择 false 表示不加；
-
-``` json
-{
-  "useTabs": false,
-  "tabWidth": 2,
-  "printWidth": 80,
-  "singleQuote": true,
-  "trailingComma": "none",
-  "semi": false
-}
-```
-
-### 3. 创建 `.prettierignore` 忽略文件
-
-```
-/dist/*
-.local
-/node_modules/**
-
-**/*.svg
-**/*.sh
-
-/public/*
-```
-
-### 4. 测试 `prettier` 是否生效
-
-在 package.json 中配置一个 scripts：
-
-``` json
-  "prettier": "prettier --write ."
-```
-
-在 VSCode 中使用需要安装插件 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)。
 
 ## 三、使用 `ESLint` 检测
 
@@ -88,99 +49,71 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 ### 1. 安装
 
 ``` bash
-yarn add eslint @hongbusi/eslint-config -D
+pnpm add -D eslint @hongbusi/eslint-config
 ```
-
-想了解关于 `@hongbusi/eslint-config`，请前往 <GitHubLink repo="Hongbusi/configs" />。
 
 ### 2. 创建 `.eslintrc` 配置文件
 
 ``` json
 {
-  "extends": [
-    "@hongbusi"
-  ]
+  "extends": "@hongbusi"
 }
 ```
 
-### 3. 创建 `.eslintignore` 忽略文件
+你通常不需要 `.eslintignore`，因为它已由预设提供。
 
-```
-dist
-public
-```
-
-### 4. 在 `package.json` 中添加 script
+### 3. 在 `package.json` 中添加 script
 
 ``` json
 {
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   }
 }
 ```
 
-在 VSCode 中使用需要安装插件 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
+### 4. 结合 husky & lint-staged 进行校验
 
-### 5. 配合 `husky` 进行校验
-
-虽然我们已经要求项目使用 `eslint` 了，但是不能保证组员提交代码之前都将 `eslint` 中的问题解决掉了。也就是我们希望保证代码仓库中的代码都是符合 `eslint` 规范的。
-
-那么如何做到这一点呢？可以通过 Husky 工具：
-
-husky 是一个 git hook 工具，可以帮助我们触发 git 提交的各个阶段：pre-commit、commit-msg、pre-push。
-
-``` bash
-npx husky-init && npm install
-npx husky add .husky/pre-commit "yarn lint --edit $1"
-```
-
-### 6. 解决 `eslint` 和 `prettier` 冲突的问题
-
-``` bash
-yarn add eslint-plugin-prettier eslint-config-prettier -D
-```
-
-添加 `prettier` 插件：
+在 `package.json` 中添加 lint-staged 配置：
 
 ``` json
-extends: [
-  "eslint:recommended",
-  "plugin:prettier/recommended"
-]
+{
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx,json,md}": "eslint --fix"
+  }
+}
 ```
 
-> 建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
+使用 husky 生成 pre-commit 文件，触发 eslint：
 
-## 四、git commit 规范
+``` bash
+npx husky add .husky/pre-commit "npx lint-staged"
+```
 
-通常我们的 git commit 会按照统一的风格来提交，这样可以快速定位每次提交的内容，方便之后对版本进行控制。
+建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 lint，把剩下的灵活性和样式留给开发人员。
 
-但是如果每次手动来编写这些是比较麻烦的事情，我们可以使用一个工具：Commitizen。
+在 VSCode 中使用需要安装插件 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
 
-Commitizen 是一个帮助我们编写规范 commit message 的工具。
+## 三、git commit 规范
+
+commitlint 是一个帮助我们编写规范 commit message 的工具。
 
 ### 1. 安装
 
 ``` bash
-yarn add commitizen cz-conventional-changelog -D
+pnpm add @commitlint/cli @commitlint/config-conventional -D
 ```
 
-### 2. 将 `config.commitizen` 键添加到 `package.json` 文件的根目录，如下所示：
+### 2. 添加配置文件
 
-``` json
-"config": {
-  "commitizen": {
-    "path": "cz-conventional-changelog"
-  }
-}
+在根目录创建 commitlint.config.js 文件，配置 commitlint：
+
+``` bash
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
 
-### 3.使用
-
-这个时候我们提交代码需要使用 `npx cz`：
-
-* 第一步是选择 type，本次更新的类型
+### 3. commit 规范
 
 | Type     | 作用                                                         |
 | -------- | ------------------------------------------------------------ |
@@ -196,23 +129,11 @@ yarn add commitizen cz-conventional-changelog -D
 | chore    | 变更构建流程或辅助工具（比如更改测试环境）                     |
 | revert   | 代码回退                                                     |
 
-### 3. 结合 husky 校验
+### 4. 结合 husky 校验
 
-如果我们按照 cz 来规范了提交风格，但是依然可以通过 `git commit` 提交不规范的格式。
-
-我们可以通过 commitlint 来限制提交：
+使用 husky 生成 commit-msg 文件，验证提交信息：
 
 ``` bash
-# 安装依赖
-yarn add @commitlint/config-conventional @commitlint/cli -D
-
-# 在根目录创建 commitlint.config.js 文件，配置 commitlint
-echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
-
-# 如果已经初始化过 husky，可以忽略
-npx husky-init && npm install
-
-# 使用 husky 生成 commit-msg 文件，验证提交信息
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
 ```
 
