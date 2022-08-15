@@ -32,7 +32,8 @@ date: '2022-06-01'
 
 3. 如何可以快速的移动
 
-配置：https://github.com/VSCodeVim/Vim#mac。修改键盘设置：系统偏好设置 -> 键盘 -> 按键重复 & 重复前延迟都调到最大。
+- 配置：[https://github.com/VSCodeVim/Vim#mac](https://github.com/VSCodeVim/Vim#mac)；
+- 修改键盘设置：系统偏好设置 -> 键盘 -> 按键重复 & 重复前延迟都调到最大。
 
 ## 第二天
 
