@@ -18,13 +18,13 @@ import { isDark } from '~/logics'
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
         </router-link>
-        <router-link to="/essays">
-          <span class="lt-md:hidden">Essays</span>
-          <jam-write class="md:hidden" />
-        </router-link>
         <router-link to="/projects">
           <span class="lt-md:hidden">Projects</span>
           <ri-lightbulb-line class="md:hidden" />
+        </router-link>
+        <router-link to="/essays">
+          <span class="lt-md:hidden">Essays</span>
+          <jam-write class="md:hidden" />
         </router-link>
         <a href="https://twitter.com/Hongbusi" target="_blank" title="Twitter">
           <feather-twitter />
