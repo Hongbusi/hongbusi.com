@@ -9,7 +9,7 @@ import { isDark } from '~/logics'
       to="/"
       focusable="false"
     >
-      <img :class="{ 'logo-dark': isDark }" src="/logo.png" alt="logo">
+      <Logo />
     </router-link>
     <nav class="nav">
       <div class="spacer" />
@@ -41,16 +41,6 @@ import { isDark } from '~/logics'
 <style scoped>
 .header h1 {
   margin-bottom: 0;
-}
-
-.logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-}
-
-.logo-dark {
-  border: 1px solid white;
 }
 
 .nav {

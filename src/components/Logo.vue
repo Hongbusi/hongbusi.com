@@ -1,0 +1,3 @@
+<template>
+  <div class="w-full h-full bg-black dark:shadow-[0_0_2px_2px_#fff]" />
+</template>
