@@ -14,7 +14,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
@@ -47,29 +46,11 @@ const config: UserConfig = {
     ]
   },
   plugins: [
-    Unocss({
-      theme: {
-        fontFamily: {
-          sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji'
-        }
-      },
-      presets: [
-        presetIcons({
-          extraProperties: {
-            'display': 'inline-block',
-            'height': '1.2em',
-            'width': '1.2em',
-            'vertical-align': 'text-bottom'
-          }
-        }),
-        presetAttributify(),
-        presetUno()
-      ]
-    }),
-
     Vue({
       include: [/\.vue$/, /\.md$/]
     }),
+
+    Unocss(),
 
     Pages({
       extensions: ['vue', 'md'],
@@ -151,8 +132,7 @@ const config: UserConfig = {
   build: {
     rollupOptions: {
       onwarn(warning, next) {
-        if (warning.code !== 'UNUSED_EXTERNAL_IMPORT')
-          next(warning)
+        if (warning.code !== 'UNUSED_EXTERNAL_IMPORT') { next(warning) }
       }
     }
   },
