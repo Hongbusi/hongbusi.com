@@ -24,7 +24,7 @@ specifiers:
   markdown-it-anchor: ^8.6.5
   markdown-it-link-attributes: ^4.0.1
   markdown-it-prism: ^2.3.0
-  markdown-it-shiki: ^0.3.0
+  markdown-it-shiki: ^0.5.1
   markdown-it-table-of-contents: ^0.6.0
   nprogress: ^0.2.0
   prism-theme-vars: ^0.2.4
@@ -72,7 +72,7 @@ devDependencies:
   markdown-it-anchor: 8.6.5_ea7kj7wzjkld5jo2noyjqxi764
   markdown-it-link-attributes: 4.0.1
   markdown-it-prism: 2.3.0
-  markdown-it-shiki: 0.3.0
+  markdown-it-shiki: 0.5.1
   markdown-it-table-of-contents: 0.6.0
   prismjs: 1.29.0
   typescript: 4.8.4
@@ -519,6 +519,18 @@ packages:
     resolution: {integrity: sha512-s1zLBjWhdEI2zwaoSgyOFoKSl109CUcVBCc7biPJ3aAf6LGLU6szDvi31JPU7bxfla2lqfhjbbg/5DdFNxOwHw==}
     dependencies:
       '@octokit/openapi-types': 11.2.0
+    dev: true
+
+  /@pkgr/utils/2.3.1:
+    resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+    dependencies:
+      cross-spawn: 7.0.3
+      is-glob: 4.0.3
+      open: 8.4.0
+      picocolors: 1.0.0
+      tiny-glob: 0.2.9
+      tslib: 2.4.0
     dev: true
 
   /@polka/url/1.0.0-next.21:
@@ -1546,6 +1558,11 @@ packages:
 
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+    dev: true
+
+  /define-lazy-prop/2.0.0:
+    resolution: {integrity: sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==}
+    engines: {node: '>=8'}
     dev: true
 
   /define-properties/1.1.3:
@@ -2611,6 +2628,10 @@ packages:
       type-fest: 0.20.2
     dev: true
 
+  /globalyzer/0.1.0:
+    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
+    dev: true
+
   /globby/11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
@@ -2621,6 +2642,10 @@ packages:
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
+    dev: true
+
+  /globrex/0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
   /graceful-fs/4.2.9:
@@ -2901,6 +2926,12 @@ packages:
     resolution: {integrity: sha512-RGdriMmQQvZ2aqaQq3awNA6dCGtKpiDFcOzrTWrDAT2MiWrKQVPmxLGHl7Y2nNu6led0kEyoX0enY0qXYsv9zw==}
     dev: true
 
+  /is-docker/2.2.1:
+    resolution: {integrity: sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==}
+    engines: {node: '>=8'}
+    hasBin: true
+    dev: true
+
   /is-extendable/0.1.1:
     resolution: {integrity: sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=}
     engines: {node: '>=0.10.0'}
@@ -3026,6 +3057,13 @@ packages:
       get-intrinsic: 1.1.3
     dev: true
 
+  /is-wsl/2.2.0:
+    resolution: {integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==}
+    engines: {node: '>=8'}
+    dependencies:
+      is-docker: 2.2.1
+    dev: true
+
   /isarray/2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
     dev: true
@@ -3136,10 +3174,6 @@ packages:
       eslint-visitor-keys: 3.3.0
       espree: 9.3.1
       semver: 7.3.5
-    dev: true
-
-  /jsonc-parser/3.0.0:
-    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
     dev: true
 
   /jsonc-parser/3.2.0:
@@ -3287,12 +3321,12 @@ packages:
       prismjs: 1.29.0
     dev: true
 
-  /markdown-it-shiki/0.3.0:
-    resolution: {integrity: sha512-oV7vKW3Ao/M1VOe1yI/zBaBWEA9uLZfMoUHuF5MX1J9T/eh9casf/dr6jj1FBsz16mcRmiSw/NKMyXkRQ3iGPQ==}
+  /markdown-it-shiki/0.5.1:
+    resolution: {integrity: sha512-cidjLEt5C6x/bmhyO+JqOy92M1qPF/bu6BN8nxaah/8YpOB4gA168NoLfnSSZATf6Btr/qxn3r1Ihy75b894zw==}
     dependencies:
-      debug: 4.3.3
-      shiki: 0.9.15
-      synckit: 0.6.0
+      debug: 4.3.4
+      shiki: 0.10.1
+      synckit: 0.7.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3596,6 +3630,15 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
+    dev: true
+
+  /open/8.4.0:
+    resolution: {integrity: sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      define-lazy-prop: 2.0.0
+      is-docker: 2.2.1
+      is-wsl: 2.2.0
     dev: true
 
   /optionator/0.8.3:
@@ -4069,10 +4112,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki/0.9.15:
-    resolution: {integrity: sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==}
+  /shiki/0.10.1:
+    resolution: {integrity: sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==}
     dependencies:
-      jsonc-parser: 3.0.0
+      jsonc-parser: 3.2.0
       vscode-oniguruma: 1.6.1
       vscode-textmate: 5.2.0
     dev: true
@@ -4260,15 +4303,23 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: true
 
-  /synckit/0.6.0:
-    resolution: {integrity: sha512-AYuCJsMNa/3m1UKxfM9edZEjsdz0Hj7namBHs1RAMcMxEJIBNrq3pUI5EmwtGNWPxOvozuVQtixMnzcMSWJ0xg==}
-    engines: {node: '>=12.3'}
+  /synckit/0.7.3:
+    resolution: {integrity: sha512-jNroMv7Juy+mJ/CHW5H6TzsLWpa1qck6sCHbkv8YTur+irSq2PjbvmGnm2gy14BUQ6jF33vyR4DPssHqmqsDQw==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dependencies:
-      tslib: 2.3.1
+      '@pkgr/utils': 2.3.1
+      tslib: 2.4.0
     dev: true
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
+    dev: true
+
+  /tiny-glob/0.2.9:
+    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
     dev: true
 
   /to-fast-properties/2.0.0:
@@ -4323,6 +4374,10 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: true
+
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
   /tsutils/3.21.0_typescript@4.8.4:
