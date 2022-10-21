@@ -13,6 +13,9 @@ projects:
       desc: '一个即时按需的原子 CSS 引擎，unocss 的 mini 版本。'
 
   Sites:
+    - name: 'git-commit-message-example'
+      link: 'https://git.hongbusi.com'
+      desc: 'A collection of git commit message examples to make your project's commit history more readable.'
     - name: 'vue-hbs-admin'
       link: 'https://github.com/developer-plus/vue-hbs-admin'
       desc: 'A vue management system. It is based on Vue3, Vite and TypeScript.'

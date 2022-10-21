@@ -85,7 +85,6 @@ const config: UserConfig = {
           })
         })
 
-        // @ts-expect-error anyway
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
@@ -132,7 +131,8 @@ const config: UserConfig = {
   build: {
     rollupOptions: {
       onwarn(warning, next) {
-        if (warning.code !== 'UNUSED_EXTERNAL_IMPORT') { next(warning) }
+        if (warning.code !== 'UNUSED_EXTERNAL_IMPORT')
+          next(warning)
       }
     }
   },
