@@ -13,7 +13,7 @@ projects:
       desc: '一个即时按需的原子 CSS 引擎，unocss 的 mini 版本。'
 
   Sites:
-    - name: 'git-commit-message-example'
+    - name: 'Awesome Git Commit Messages'
       link: 'https://git.hongbusi.com'
       desc: 'A collection of git commit message examples to make your project commit history more readable.'
     - name: 'vue-hbs-admin'
