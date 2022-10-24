@@ -15,7 +15,7 @@ projects:
   Sites:
     - name: 'git-commit-message-example'
       link: 'https://git.hongbusi.com'
-      desc: 'A collection of git commit message examples to make your project\'s commit history more readable.'
+      desc: 'A collection of git commit message examples to make your project commit history more readable.'
     - name: 'vue-hbs-admin'
       link: 'https://github.com/developer-plus/vue-hbs-admin'
       desc: 'A vue management system. It is based on Vue3, Vite and TypeScript.'
