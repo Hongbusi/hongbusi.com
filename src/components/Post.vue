@@ -38,7 +38,8 @@ onMounted(() => {
       && !event.altKey
     ) {
       const url = new URL(link.href)
-      if (url.origin !== window.location.origin) return
+      if (url.origin !== window.location.origin)
+        return
 
       event.preventDefault()
       const { pathname, hash } = url

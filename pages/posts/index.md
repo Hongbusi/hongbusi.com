@@ -1,9 +1,7 @@
 ---
-title: Blog - Hongbusi
-display: ''
+title: 'Blog - Hongbusi'
+display: 'Blog'
 ---
-
-<SubNav/>
 
 <ClientOnly>
   <Plum/>
