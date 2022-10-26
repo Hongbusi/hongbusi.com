@@ -1,11 +1,3 @@
-<template>
-  <NavBar />
-  <main class="px-7 py-10">
-    <router-view />
-    <Footer />
-  </main>
-</template>
-
 <script setup lang="ts">
 useHead({
   meta: [
@@ -16,3 +8,11 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <main class="px-6 pb-10 mx-auto max-w-3xl">
+    <Header />
+    <router-view />
+    <Footer />
+  </main>
+</template>

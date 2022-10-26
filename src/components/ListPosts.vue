@@ -2,6 +2,11 @@
 import { useRouter } from 'vue-router'
 import { formatDate } from '~/logics'
 
+const props = defineProps<{
+  type?: string
+  posts?: Post[]
+}>()
+
 export interface Post {
   path: string
   title: string
@@ -9,11 +14,6 @@ export interface Post {
   lang?: string
   duration?: string
 }
-
-const props = defineProps<{
-  type?: string
-  posts?: Post[]
-}>()
 
 const router = useRouter()
 const routes = router.getRoutes()
@@ -40,7 +40,7 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
   <ul>
     <template v-for="route, index in posts" :key="route.path">
       <div v-if="!isSameYear(route.date, posts[index - 1]?.date)" class="relative h-20 pointer-events-none">
-        <span class="text-8em op10 absolute left--3rem top--2rem font-bold">{{ getYear(route.date) }}</span>
+        <span class="text-8em op10 absolute left-0 top--2rem font-bold">{{ getYear(route.date) }}</span>
       </div>
       <app-link
         class="item block font-normal mb-6 mt-2 no-underline"

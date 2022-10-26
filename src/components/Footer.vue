@@ -1,10 +1,16 @@
 <template>
-  <div class="mt-10 mb-6 prose m-auto opacity-50 flex flex-col">
-    <span class="text-sm">Copyright © 2021-present Hongbusi</span>
-    <!-- <span class="text-sm mt-4">
-      <a href="https://beian.miit.gov.cn" target="_blank">
-        浙ICP备2022017304号-1
+  <footer class="flex justify-between mt-12 mb-6 opacity-50">
+    <div>
+      Copyright © 2021-present Hongbusi
+    </div>
+    <div class="flex items-center space-x-2">
+      <toggle-theme />
+      <a href="https://twitter.com/Hongbusi" target="_blank" title="Twitter">
+        <feather-twitter />
       </a>
-    </span> -->
-  </div>
+      <a href="https://github.com/Hongbusi" target="_blank" title="GitHub">
+        <uil-github-alt />
+      </a>
+    </div>
+  </footer>
 </template>
