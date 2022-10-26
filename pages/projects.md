@@ -5,12 +5,14 @@ subtitle: List of projects that I am proud of.
 description: List of projects that I am proud of.
 projects:
   Latest:
-    - name: 'Weekly'
-      link: 'https://github.com/developer-plus/weekly'
-      desc: '记录每周值得分享的内容，周一发布。'
-    - name: 'mini-unocss'
-      link: 'https://github.com/developer-plus/mini-unocss'
-      desc: '一个即时按需的原子 CSS 引擎，unocss 的 mini 版本。'
+    - name: 'Awesome Git Commit Messages'
+      link: 'https://git.hongbusi.com'
+      desc: 'A collection of git commit message examples to make your project commit history more readable.'
+
+  Templates:
+    - name: 'starter-vue'
+      link: 'https://github.com/Hongbusi/starter-vue'
+      desc: 'A template to quickly create a vue project.' 
 
   Sites:
     - name: 'Awesome Git Commit Messages'
@@ -37,13 +39,10 @@ projects:
       desc: 'Code snippets for vscode.'
 
   Utils:
-    - name: 'Configs'
-      link: 'https://github.com/Hongbusi/configs'
-      desc: 'ESLint config & StyleLint config & Prettier config for my personal projects.'
+    - name: 'Eslint Config'
+      link: 'https://github.com/Hongbusi/es-config'
+      desc: 'ESLint config for my personal projects.'
       icon: 'i-carbon-cloud-satellite-config'
-    - name: 'Release'
-      link: 'https://github.com/Hongbusi/release'
-      desc: 'A command-line tool to quickly create releases.'
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
