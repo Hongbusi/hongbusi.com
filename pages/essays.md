@@ -5,6 +5,10 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2022-11-11
+
+你的每一个行动，都是对你想成为怎样的人的投票。
+
 ## 2022-07-11
 
 俞敏洪说：“一个自卑的人，一定比一个狂妄的人还要更加的糟糕。因为狂妄的人，也许还能抓住他生活中，本来不是他的机会，但是自卑的人，永远会失去，本来就应该是属于他的机会。”
