@@ -11,6 +11,7 @@ import type { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
+import { fairyDustCursor } from '~/logics/fairyDustCursor'
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -41,6 +42,7 @@ export const createApp = ViteSSG(
     dayjs.extend(LocalizedFormat)
 
     if (isClient) {
+      fairyDustCursor()
       router.beforeEach(() => { NProgress.start() })
       router.afterEach(() => { NProgress.done() })
     }

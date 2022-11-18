@@ -18,6 +18,12 @@ html {
   overflow: scroll;
 }
 
+html,
+body,
+#app {
+  min-height: 100vh;
+}
+
 #nprogress {
   pointer-events: none;
 }
@@ -41,7 +47,7 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar:horizontal {
-  height: 6px;
+  height: 0;
 }
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
   background: var(--c-bg);
