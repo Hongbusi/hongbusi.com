@@ -71,12 +71,15 @@ pnpm add pkg-a -D --workspace --filter pkg-b
 
 ``` ts
 // packages/pkg-a/index.ts
-// packages/pkg-b/index.ts
-import { sum } from 'pkg-a'
-
 export function sum(n: number, m: number) {
   return n + m
 }
+```
+
+``` ts
+// packages/pkg-b/index.ts
+import { sum } from 'pkg-a'
+
 sum(1, 2)
 ```
 
