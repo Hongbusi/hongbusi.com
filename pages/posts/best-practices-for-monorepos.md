@@ -6,7 +6,7 @@ duration: '15 min'
 
 <GitHubLink repo="Hongbusi/starter-monorepo" />
 
-本文将介绍如何使用 pnpm 及 Monorepo 实现高效的代码构建和发布流程。[代码仓库链接](https://github.com/Hongbusi/starter-monorepo)。
+本文将介绍如何使用 pnpm 及 Monorepo 实现高效的代码构建和发布流程。
 
 ## 什么是 Monorepo？
 
