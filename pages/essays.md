@@ -5,6 +5,12 @@ subtitle: 'Personal essays and some good points seen.'
 description: 'Personal essays and some good points seen.'
 ---
 
+## 2023-03-16
+
+人生有三次成长：一是发现自己不再是世界的中心的时候，二是发现再怎么努力也无能为力的时候，三是接受自己的平凡并去享受平凡的时候。
+
+—— 周国平
+
 ## 2022-12-16
 
 达芬奇综合症指的是，不停地想学新东西，做了很多新项目，但是实际完成的很少。
