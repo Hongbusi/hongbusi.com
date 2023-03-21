@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/content',
   ],
-  unocss: {
-    preflight: true,
-  },
   colorMode: {
     preference: 'dark',
     classSuffix: '',
