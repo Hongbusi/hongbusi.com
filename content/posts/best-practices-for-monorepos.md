@@ -4,7 +4,7 @@ date: '2023-03-14'
 duration: '15 min'
 ---
 
-<GitHubLink repo="Hongbusi/starter-monorepo" />
+<!-- <GitHubLink repo="Hongbusi/starter-monorepo" /> -->
 
 本文将介绍如何使用 pnpm 及 Monorepo 实现高效的代码构建和发布流程。
 

@@ -1,22 +1,44 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
+  shortcuts: {
+    'bg-base': 'bg-$c-bg',
+    'bg-card': 'bg-$c-bg-card',
+    'text-base': 'text-$c-text',
+    'text-secondary': 'text-$c-text-secondary',
+    'border-base': 'border border-$c-border',
+  },
   presets: [
     presetUno(),
     presetIcons({
+      prefix: '',
+      scale: 1.2,
       extraProperties: {
-        'display': 'inline-block',
-        'height': '1.2em',
-        'width': '1.2em',
-        'vertical-align': 'text-bottom'
-      }
+        display: 'inline-block',
+      },
+      collections: {
+        i: FileSystemIconLoader('./assets/icons'),
+      },
     }),
     presetAttributify(),
     presetWebFonts({
       fonts: {
         sans: 'Inter:400,600,800',
-        mono: 'DM Mono'
-      }
-    })
-  ]
+        mono: 'DM Mono',
+      },
+    }),
+  ],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+  ],
 })
