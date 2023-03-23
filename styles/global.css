@@ -1,9 +1,0 @@
-html,
-body,
-#__nuxt {
-  --at-apply: h-screen;
-}
-
-html {
-  --at-apply: bg-base text-base;
-}
