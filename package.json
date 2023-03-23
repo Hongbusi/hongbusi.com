@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.37.0",
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/rss": "^2.3.1",
+    "@astrojs/sitemap": "^1.2.1",
     "@iconify/utils": "^2.1.5",
-    "astro": "^2.0.10",
+    "astro": "^2.1.5",
     "eslint": "^8.36.0",
     "unocss": "^0.50.6"
   }
