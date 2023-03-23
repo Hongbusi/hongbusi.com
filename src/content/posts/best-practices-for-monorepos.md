@@ -1,10 +1,8 @@
 ---
 title: '从构建到发布：Monorepo 的最佳实践'
-date: '2023-03-14'
-duration: '15 min'
+description: ''
+publishDate: 'Mar 14 2023'
 ---
-
-<!-- <GitHubLink repo="Hongbusi/starter-monorepo" /> -->
 
 本文将介绍如何使用 pnpm 及 Monorepo 实现高效的代码构建和发布流程。
 

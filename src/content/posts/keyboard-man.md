@@ -1,6 +1,7 @@
 ---
 title: '键盘侠养成计划'
-date: '2022-06-01'
+description: ''
+publishDate: 'Jun 01 2022'
 ---
 
 ## 准备工作

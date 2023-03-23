@@ -1,6 +1,7 @@
 ---
 title: 'Mac 开发环境配置'
-date: '2022-11-30'
+description: ''
+publishDate: 'Nov 30 2022'
 ---
 
 ## brew

@@ -1,7 +1,7 @@
 ---
 title: 'Promise'
-date: '2022-04-17'
-duration: 30 min
+description: ''
+publishDate: 'Apr 17 2022'
 ---
 
 ## 异步任务的处理

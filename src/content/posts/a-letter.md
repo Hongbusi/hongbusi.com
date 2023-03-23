@@ -1,7 +1,7 @@
 ---
 title: '一封信'
-date: '2021-05-27'
-duration: '3 min'
+description: ''
+publishDate: 'May 27 2021'
 ---
 
 五周年之际，未能亲临，深表歉意。

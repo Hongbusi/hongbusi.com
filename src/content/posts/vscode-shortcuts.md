@@ -1,7 +1,7 @@
 ---
 title: 'VS Code 快捷键（Mac）'
-date: '2022-03-13'
-duration: '10 min'
+description: ''
+publishDate: 'Mar 13 2022'
 ---
 
 ## [Keyboard shortcuts for Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
