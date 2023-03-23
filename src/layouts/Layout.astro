@@ -45,6 +45,8 @@ const { title, description, image } = Astro.props;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body class="h-full bg-base text-base">
     <main class="px-6 pb-10 mx-auto w-65ch">
