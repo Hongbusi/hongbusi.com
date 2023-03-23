@@ -2,10 +2,6 @@
 title: Hongbusi
 ---
 
-<ClientOnly>
-  <Plum/>
-</ClientOnly>
-
 Hi, welcome to my personal site.
 
 I am Hongbusi, a front-end developer. Currently working in Hangzhou.

@@ -1,7 +1,5 @@
 ---
-title: 'Essays - Hongbusi'
-display: 'Essays'
-subtitle: 'Personal essays and some good points seen.'
+title: 'Essays'
 description: 'Personal essays and some good points seen.'
 ---
 

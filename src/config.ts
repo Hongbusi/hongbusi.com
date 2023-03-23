@@ -1,6 +1,8 @@
-import type { Site } from './types'
+import type { SiteConfig } from './types'
 
-export const SITE: Site = {
+const siteConfig: SiteConfig = {
   title: 'Hongbusi',
   description: 'This is description.',
 }
+
+export default siteConfig

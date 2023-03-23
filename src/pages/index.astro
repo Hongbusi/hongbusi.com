@@ -1,11 +1,11 @@
 ---
 import Layout from '~/layouts/Layout.astro'
-
+import { Content, frontmatter } from '~/content/index.md'
 ---
 
-<Layout
-  title="About Me"
-	description="Lorem ipsum dolor sit amet"
->
-  hello
+<Layout>
+  <article class="prose">
+    <h1>{frontmatter.title}</h1>
+    <Content />
+  </article>
 </Layout>
