@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <article class="prose">
+  <article class="prose max-w-3xl">
     <h1>{frontmatter.title}</h1>
     {
       frontmatter.description && (
