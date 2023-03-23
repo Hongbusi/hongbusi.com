@@ -1,5 +1,5 @@
 ---
-layout: ~/layouts/Other.astro
+layout: ~/layouts/Layout.astro
 title: 'Essays'
 description: 'Personal essays and some good points seen.'
 ---

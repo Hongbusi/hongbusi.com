@@ -1,5 +1,5 @@
 ---
-layout: ~/layouts/Other.astro
+layout: ~/layouts/Layout.astro
 title: Hongbusi
 ---
 

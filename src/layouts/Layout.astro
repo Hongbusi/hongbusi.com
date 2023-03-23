@@ -1,55 +1,36 @@
 ---
-import '../styles/global.css';
-import siteConfig from '~/config'
+import BaseHead from '~/components/BaseHead.astro'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
 
 export interface Props {
 	title?: string
 	description?: string
+  frontmatter?: {
+    title?: string
+    description?: string
+  }
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-
-const { title, description = siteConfig.description } = Astro.props
-const siteTitle = title ? `${title} - ${siteConfig.title}` : siteConfig.title
+const { title, description, frontmatter = {} } = Astro.props
+const t = title || frontmatter.title
+const desc = description || frontmatter.description
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full font-sans dark">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
-
-    <!-- Primary Meta Tags -->
-    <title>{siteTitle}</title>
-    <meta name="title" content={siteTitle} />
-    <meta name="description" content={description} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={siteTitle} />
-    <meta property="twitter:description" content={description} />
-
-    <script is:inline src="/toggle-theme.js"></script>
+    <BaseHead title={t} description={desc} />
   </head>
-  <body class="h-full bg-base text-base">
-    <main class="px-6 pb-10 mx-auto max-w-3xl">
-      <Header />
-      <slot />
-      <Footer />
+  <body class="px-6 pb-10 mx-auto max-w-3xl min-h-screen bg-base text-base font-sans">
+    <Header />
+    <main>
+      <article class="prose max-w-3xl">
+        <h1>{t}</h1>
+        {desc && <p class="opacity-50 italic">{desc}</p>}
+        <slot />
+      </article>
     </main>
+    <Footer />
   </body>
 </html>
