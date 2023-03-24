@@ -1,6 +1,5 @@
 ---
 title: 'VS Code Extensions Recommends'
-description: ''
 publishDate: 'Jun 24 2021'
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: 'VS Code 快捷键（Mac）'
-description: ''
 publishDate: 'Mar 13 2022'
 ---
 

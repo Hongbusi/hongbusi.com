@@ -1,6 +1,5 @@
 ---
 title: 'My First VS Code Extension'
-description: ''
 publishDate: 'Mar 07 2022'
 ---
 

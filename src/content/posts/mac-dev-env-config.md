@@ -1,6 +1,5 @@
 ---
 title: 'Mac 开发环境配置'
-description: ''
 publishDate: 'Nov 30 2022'
 ---
 
