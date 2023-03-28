@@ -9,16 +9,22 @@ const posts = (await getCollection('posts')).sort(
 ---
 
 <Layout title="Posts">
-  <section>
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <FormattedDate date={post.data.publishDate} />
-            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+  <ul class="pt-4 pl-0">
+    {
+      posts.map((post) => (
+        <li class="list-none">
+          <a class="block py-2 my-2 transition-all opacity-90 hover:opacity-100 decoration-none" href={`/posts/${post.slug}/`}>
+            <div class="flex justify-between">
+              <div>
+                <span> {post.data.title}</span>
+                <span class="opacity-60">· 10min</span>
+              </div>
+              <FormattedDate date={post.data.publishDate} />
+            </div>
+            <div class="mt-1 opacity-60">这是一段描述这是一段描述这是一段描述这是一段描述这是一段描述</div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
