@@ -9,7 +9,4 @@ export default defineConfig({
     UnoCSS(),
     sitemap(),
   ],
-  markdown: {
-    drafts: true,
-  },
 })
