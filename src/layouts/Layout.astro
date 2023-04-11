@@ -22,10 +22,10 @@ const desc = description || frontmatter.description
   <head>
     <BaseHead title={t} description={desc} />
   </head>
-  <body class="px-6 pb-10 mx-auto max-w-3xl min-h-screen bg-base text-base font-sans">
+  <body class="px-6 pb-10 mx-auto max-w-75ch min-h-screen bg-base text-base font-sans">
     <Header />
     <main>
-      <article class="prose max-w-3xl">
+      <article class="prose max-w-75ch">
         <h1>{t}</h1>
         {desc && <p class="opacity-50 italic">{desc}</p>}
         <slot />
