@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
-import Post from '~/layouts/Layout.astro'
+import Layout from '~/layouts/Layout.astro'
 import FormattedDate from '~/components/FormattedDate.astro'
 
 export async function getStaticPaths() {
@@ -18,8 +18,8 @@ const { title, publishDate } = post.data
 const { Content } = await post.render()
 ---
 
-<Post title={title}>
+<Layout title={title}>
   <FormattedDate date={publishDate} />
   <hr />
 	<Content />
-</Post>
+</Layout>
