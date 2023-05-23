@@ -13,6 +13,6 @@ If you find some strange English when reading my site, you don't have to be surp
 
 The goal is to be a [Vue.js](https://github.com/vuejs) contributor, not just because [Evan You](https://github.com/yyx990803), [Anthony Fu](https://github.com/antfu) is my idol. 
 
-Find me on [GitHub](https://github.com/Hongbusi), [Twitter](https://www.twitter.com/Hongbusi), mail me at [coderhbs@gmail.com](mailto:coderhbs@gmail.com).
+Find me on [GitHub](https://github.com/Hongbusi), [Twitter](https://www.twitter.com/Hongbusi), mail me at [hi@hongbusi.com](mailto:hi@hongbusi.com).
 
 Thanks for reading, see you next time :)
