@@ -2,7 +2,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port 1219",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -10,15 +10,15 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@unocss/reset": "^0.50.6"
+    "@unocss/reset": "^0.50.8"
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.37.0",
-    "@astrojs/rss": "^2.3.1",
-    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/rss": "^2.4.3",
+    "@astrojs/sitemap": "^1.3.1",
     "@iconify/utils": "^2.1.5",
-    "astro": "^2.1.5",
-    "eslint": "^8.36.0",
-    "unocss": "^0.50.6"
+    "astro": "^2.5.3",
+    "eslint": "^8.41.0",
+    "unocss": "^0.50.8"
   }
 }
