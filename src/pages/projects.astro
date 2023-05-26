@@ -1,59 +1,59 @@
 ---
 import Layout from '~/layouts/Layout.astro'
+import Project from '~/components/Repo.astro'
 
 interface Project {
   name: string
-  link: string
-  description: string
+  owner?: string
 }
-const projects: Project[] = [
-  {
-    name: 'Translate',
-    link: 'https://github.com/Hongbusi/translate',
-    description: 'Raycast Youdao Translate extension.',
-  }
-]
 
-// projects:
-//   Latest:
-//
-//     - name: 'Code Variable'
-//       link: 'https://github.com/Hongbusi/code-variable'
-//       desc: 'Generate available code variables.'
+const categorizedProjects: Record<string, Project[]> = {
+  'Tempaltes': [
+    { name: 'starter-vue' },
+    { name: 'starter-monorepo' },
+    { name: 'vue-hbs-admin', owner: 'developer-plus' },
+  ],
+  'Sites': [
+    { name: 'awesome-git-commit-messages' },
+  ],
+  'VS Code Extensions': [
+    { name: 'code-snippets' },
+  ],
+  'Raycast Extensions': [
+    { name: 'code-variable' },
+    { name: 'translate' },
+  ],
+}
 
-//   Templates:
-//     - name: 'starter-vue'
-//       link: 'https://github.com/Hongbusi/starter-vue'
-//       desc: 'A template to quickly create a vue project.'
+const fetchRepoInfo = async (repo: Project): Promise<any> => {
+  const { name, owner = 'Hongbusi' } = repo
+  const response = await fetch(`https://api.github.com/repos/${owner}/${name}`)
+  return response.json()
+}
 
-//   Sites:
-//     - name: 'Awesome Git Commit Messages'
-//       link: 'https://git.hongbusi.com'
-//       desc: 'A collection of git commit message examples to make your project commit history more readable.'
-//     - name: 'vue-hbs-admin'
-//       link: 'https://github.com/developer-plus/vue-hbs-admin'
-//       desc: 'A vue management system. It is based on Vue3, Vite and TypeScript.'
+const getCategorizedRepos = async (): Promise<Record<string, any[]>> => {
+  const categorizedRepos: Record<string, any[]> = {}
 
-//   VS Code Extensions:
-//     - name: 'Code Snippets'
-//       link: 'https://github.com/Hongbusi/code-snippets'
-//       desc: 'Code snippets for vscode.'
+  await Promise.all(
+    Object.entries(categorizedProjects).map(async ([category, repos]) => {
+      const results = await Promise.all(repos.map(fetchRepoInfo))
+      categorizedRepos[category] = results
+    })
+  )
 
-//   Raycast Extensions:
-//     - name: 'Translate'
-//       link: 'https://github.com/Hongbusi/translate'
-//       desc: 'Raycast Youdao Translate extension.'
-//     - name: 'Code Variable'
-//       link: 'https://github.com/Hongbusi/code-variable'
-//       desc: 'Generate available code variables.'
+  return categorizedRepos
+}
 
-//   Utils:
-//     - name: 'Eslint Config'
-//       link: 'https://github.com/Hongbusi/es-config'
-//       desc: 'ESLint config for my personal projects.'
-//       icon: 'i-carbon-cloud-satellite-config'
+const categorizedRepos = await getCategorizedRepos()
 ---
 
 <Layout title="Projects" description="List of projects that I am proud of.">
-	This is project list.
+  {Object.entries(categorizedRepos).map(([category, repos]) => (
+    <div>
+      <h3 class="opacity-75">{category}</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 grid-gap-4">
+        {repos.map(repo => (<Project repo={repo} />))}
+      </div>
+    </div>
+  ))}
 </Layout>
