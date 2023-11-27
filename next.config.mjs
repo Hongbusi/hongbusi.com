@@ -6,6 +6,9 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 export default withContentlayer(nextConfig)
