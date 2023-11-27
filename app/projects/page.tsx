@@ -7,9 +7,9 @@ import { Card } from '@/components/Card'
 
 export const revalidate = 60
 export default async function ProjectsPage() {
-  const featured = allProjects.find(project => project.slug === 'unkey')!
-  const top2 = allProjects.find(project => project.slug === 'planetfall')!
-  const top3 = allProjects.find(project => project.slug === 'highstorm')!
+  const featured = allProjects.find(project => project.slug === 'adminify')!
+  const top2 = allProjects.find(project => project.slug === 'hongbusi.com')!
+  const top3 = allProjects.find(project => project.slug === 'vue-hbs-admin')!
   const sorted = allProjects
     .filter(p => p.published)
     .filter(
@@ -33,7 +33,7 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            List of projects that I am proud of.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
