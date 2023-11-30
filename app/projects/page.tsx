@@ -8,8 +8,8 @@ import { Card } from '@/components/Card'
 export const revalidate = 60
 export default async function ProjectsPage() {
   const featured = allProjects.find(project => project.slug === 'adminify')!
-  const top2 = allProjects.find(project => project.slug === 'hongbusi.com')!
-  const top3 = allProjects.find(project => project.slug === 'vue-hbs-admin')!
+  const top2 = allProjects.find(project => project.slug === 'petite-vue')!
+  const top3 = allProjects.find(project => project.slug === 'hongbusi.com')!
   const sorted = allProjects
     .filter(p => p.published)
     .filter(

@@ -1,9 +1,51 @@
 ---
 title: adminify
-description: My personal website.
+description: 一个后台管理系统。（全栈项目）
 date: 2023-03-28
 repository: Hongbusi/adminify
 published: true
 ---
 
-My personal website.
+一个后台管理系统。
+
+## client（客户端）
+
+技术栈 React、TailwindCSS、TS、Ant Design、UmiJS...
+
+### 安装依赖
+
+``` bash
+cd client
+pnpm install
+```
+
+### 运行项目
+
+``` bash
+pnpm run dev
+```
+
+## server（服务端）
+
+技术栈：Nest、MySQL、Redis...
+
+### 安装依赖
+
+``` bash
+cd server
+pnpm install
+```
+
+### 创建 docker 容器（需要先安装 docker）
+
+``` bash
+cp .env.example .env
+docker compose up -d
+```
+
+### 运行项目
+
+``` bash
+pnpm run start:dev
+```
+
