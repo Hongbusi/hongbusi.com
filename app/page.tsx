@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Particles from '@/components/Particles'
+import { Footer } from '@/components/Footer'
 
 const navigation = [
   { name: 'Projects', href: '/projects' },
@@ -31,10 +32,12 @@ export default function Home() {
       </h1>
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
+        <h2 className="text-sm text-zinc-500">
           The more you know, the more you don’t know.
         </h2>
       </div>
+
+      <Footer />
     </div>
   )
 }
