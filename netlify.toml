@@ -1,8 +1,8 @@
 [build]
-  command = "pnpm run build"
-  publish = "build"
+command = "pnpm run build"
+publish = "build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200

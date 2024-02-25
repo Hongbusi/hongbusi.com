@@ -19,7 +19,8 @@ function requestData(url, successCallback, failureCallback) {
     if (url === '/test') {
       // 发送成功
       successCallback('发送成功')
-    } else {
+    }
+    else {
       // 发送失败
       failureCallback('发送失败')
     }
@@ -61,9 +62,9 @@ const promise = new Promise((resolve, reject) => {
   reject('reject')
 })
 
-promise.then(res => {
+promise.then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 })
 ```
@@ -80,11 +81,10 @@ promise.then(res => {
 function requestData(url) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (url === '/test') {
+      if (url === '/test')
         resolve('发送成功')
-      } else {
+      else
         reject('发送失败')
-      }
     }, 1000)
   })
 }
@@ -118,7 +118,7 @@ new Promise((resolve, reject) => {
 ``` js
 new Promise((resolve, reject) => {
   resolve('normal resolve')
-}).then(res => {
+}).then((res) => {
   connsole.log(res)
 })
 ```
@@ -130,9 +130,9 @@ new Promise((resolve, reject) => {
   resolve(new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('第二个 Promise 的 resolve')
-    }, 1000);
+    }, 1000)
   }))
-}).then(res => {
+}).then((res) => {
   console.log(res)
 })
 ```
@@ -143,11 +143,11 @@ new Promise((resolve, reject) => {
 ``` js
 new Promise((resolve, reject) => {
   resolve({
-    then: function(resolve, reject) {
+    then(resolve, reject) {
       resolve('thenable value')
     }
   })
-}).then(res => {
+}).then((res) => {
   console.log(res)
 })
 ```
@@ -183,11 +183,11 @@ promise.then(res => {
 - 当 `Promise` 的状态变成 `fulfilled` 的时候，这些回调函数都会被执行。
 
 ``` js
-promise.then(res => {
+promise.then((res) => {
   console.log('res1:', res)
 })
 
-promise.then(res => {
+promise.then((res) => {
   console.log('res2:', res)
 })
 ```
@@ -215,11 +215,11 @@ promise.then(res => {
 - 当 `Promise` 的状态变成 `reject` 的时候，这些回调函数都会被执行。
 
 ``` js
-promise.catch(err => {
+promise.catch((err) => {
   console.log('err1:', err)
 })
 
-promise.catch(err => {
+promise.catch((err) => {
   console.log('err2:', err)
 })
 ```
@@ -231,11 +231,11 @@ promise.catch(err => {
 下面的代码，后续是 `res` 打印，这是因为 `catch` 传入的回调在执行完后，默认状态依然会是 `fulfilled` 的。
 
 ``` js
-promise.catch(err => {
+promise.catch((err) => {
   console.log(err)
-}).then(res => {
+}).then((res) => {
   console.log('res', res)
-}).catch(err => {
+}).catch((err) => {
   console.log('err', err)
 })
 ```
@@ -243,12 +243,12 @@ promise.catch(err => {
 那么如果我们希望后续继续执行 `catch`，那么需要抛出一个异常。
 
 ``` js
-promise.catch(err => {
+promise.catch((err) => {
   console.log(err)
   throw new Error('error')
-}).then(res => {
+}).then((res) => {
   console.log('res', res)
-}).catch(err => {
+}).catch((err) => {
   console.log('err', err)
 })
 ```
@@ -265,9 +265,9 @@ const promise = new Promise((resolve, reject) => {
   reject('reject')
 })
 
-promise.then(res => {
+promise.then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 }).finally(() => {
   console.log('finally')
@@ -286,7 +286,7 @@ promise.then(res => {
 ``` js
 Promise.resolve('Hongbusi')
 // 等价于
-new Promise((resolve) => resolve('Hongbusi'))
+new Promise(resolve => resolve('Hongbusi'))
 ```
 
 `resolve` 参数的形态：
@@ -332,9 +332,9 @@ const p3 = new Promise((resolve, reject) => {
   // reject('reject3')
 })
 
-Promise.all([p1, p2, p3]).then(res => {
+Promise.all([p1, p2, p3]).then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 })
 ```
@@ -358,9 +358,9 @@ const p2 = new Promise((resolve, reject) => {
 const p3 = new Promise((resolve, reject) => {
   resolve('resolve3')
 })
-Promise.allSettled([p1, p2, p3]).then(res => {
+Promise.allSettled([p1, p2, p3]).then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 })
 ```
@@ -383,9 +383,9 @@ Promise.allSettled([p1, p2, p3]).then(res => {
 如果有一个 `Promise` 有了结果，我们就希望决定最终新 `Promise` 的状态，那么可以使用 `race` 方法。`prace` 是竞技、竞赛的意思，表示多个 `Promise` 相互竞争，谁先有结果，那么就使用谁的结果。
 
 ``` js
-Promise.race([p1, p2, p3]).then(res => {
+Promise.race([p1, p2, p3]).then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 })
 ```
@@ -398,9 +398,9 @@ Promise.race([p1, p2, p3]).then(res => {
 - 如果所有的 `Promise` 都是 `reject` 的，那么也会等到所有的 `Promise` 都变成 `rejected` 状态。
 
 ``` js
-Promise.any([p1, p2, p3]).then(res => {
+Promise.any([p1, p2, p3]).then((res) => {
   console.log(res)
-}).catch(err => {
+}).catch((err) => {
   console.log(err)
 })
 ```
@@ -437,7 +437,8 @@ class HbsPromise {
       if (this.status === PROMISE_STATUS_PENDING) {
         // 添加微任务
         queueMicrotask(() => {
-          if (this.status !== PROMISE_STATUS_PENDING) return
+          if (this.status !== PROMISE_STATUS_PENDING)
+            return
           this.status = PROMISE_STATUS_FULFILLED
           this.value = value
           this.onFulfilledFns.forEach((fn) => {
@@ -451,7 +452,8 @@ class HbsPromise {
       if (this.status === PROMISE_STATUS_PENDING) {
         // 添加微任务
         queueMicrotask(() => {
-          if (this.status !== PROMISE_STATUS_PENDING) return
+          if (this.status !== PROMISE_STATUS_PENDING)
+            return
           this.status = PROMISE_STATUS_REJECTED
           this.reason = reason
           this.onRejectedFns.forEach((fn) => {
@@ -478,13 +480,11 @@ class HbsPromise {
 
     return new HbsPromise((resolve, reject) => {
       // 1. 如果在 then 调用的时候，状态已经确定下来
-      if (this.status === PROMISE_STATUS_FULFILLED) {
+      if (this.status === PROMISE_STATUS_FULFILLED)
         execFunctionWithCatchError(onFulfilled, this.value, resolve, reject)
-      }
 
-      if (this.status === PROMISE_STATUS_REJECTED) {
+      if (this.status === PROMISE_STATUS_REJECTED)
         execFunctionWithCatchError(onRejected, this.reason, resolve, reject)
-      }
 
       // 2. 将成功回调和失败回调放到数组中
       if (this.status === PROMISE_STATUS_PENDING) {
@@ -524,9 +524,8 @@ class HbsPromise {
       promises.forEach((promise, index) => {
         promise.then((res) => {
           values[index] = res
-          if (values.length === promises.length) {
+          if (values.length === promises.length)
             resolve(values)
-          }
         }, (err) => {
           reject(err)
         })
@@ -544,17 +543,15 @@ class HbsPromise {
             value: res
           }
 
-          if (values.length === promises.length) {
+          if (values.length === promises.length)
             resolve(values)
-          }
         }, (err) => {
           values[index] = {
             status: PROMISE_STATUS_REJECTED,
             reason: err
           }
-          if (values.length === promises.length) {
+          if (values.length === promises.length)
             resolve(values)
-          }
         })
       })
     })
@@ -574,9 +571,8 @@ class HbsPromise {
       promises.forEach((promise, index) => {
         promise.then(resolve, (err) => {
           reasons[index] = err
-          if (reasons.length === promises.length) {
+          if (reasons.length === promises.length)
             reject(new AggregateError(reasons))
-          }
         })
       })
     })
@@ -609,7 +605,7 @@ class HbsPromise {
     // 定义 resolve、reject 回调
     // resolve 执行微任务队列：改变状态、获取 value、then 传入执行成功回调
     // reject 执行微任务队列：改变状态、获取 reason、then 传入执行失败回调
-    
+
     // try catch
     executor(resolve, reject)
   }
@@ -623,14 +619,14 @@ class HbsPromise {
   then(onFulfilled, onRejected) {
     // this.onFulfilled = onFulfilled
     // this.onRejected = onRejected
-    
+
     // 1.判断 onFulfilled、onRejected，会给默认值
-    
+
     // 2.返回 Promise resolve/reject
-    
+
     // 3.判断之前的 promise 状态是否确定
     // onFulfilled/onRejected 直接执行（捕获异常）
-    
+
     // 4.添加到数组中 push(() => { 执行 onFulfilled/onRejected 直接执行代码 })
   }
 }

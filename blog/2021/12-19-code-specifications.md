@@ -9,7 +9,7 @@ tags: [eslint]
 
 EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。
 
-``` yaml
+```
 # http://editorconfig.org
 
 root = true
@@ -166,7 +166,6 @@ npx husky add .husky/pre-commit "npx lint-staged"
 
 > 建议不要在使用 `eslint` 的时候再去使用 `prettier`。这个配置已经做了相当多的格式化 `lint`，把剩下的灵活性和样式留给开发人员。—— Anthony Fu
 
-
 ## git commit 规范
 
 `commitlint` 是一个帮助我们编写规范 commit message 的工具。
@@ -210,5 +209,3 @@ npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
 ```
 
 感谢阅读，下次再见。
-
-

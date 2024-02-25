@@ -54,7 +54,7 @@ vsce, short for "Visual Studio Code Extensions", is a command-line tool for pack
 # installation
 npm install vsce -g
 
-# generated xxx.vsix 
+# generated xxx.vsix
 vsce package
 ```
 

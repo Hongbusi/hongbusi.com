@@ -1,6 +1,9 @@
 {
   "name": "hongbusi.com",
   "private": true,
+  "engines": {
+    "node": ">=18.0"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "dev": "docusaurus start",
@@ -25,9 +28,14 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.4",
     "@docusaurus/module-type-aliases": "3.1.1",
     "@docusaurus/tsconfig": "3.1.1",
     "@docusaurus/types": "3.1.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "~5.2.2"
   },
   "browserslist": {
@@ -41,8 +49,5 @@
       "last 3 firefox version",
       "last 5 safari version"
     ]
-  },
-  "engines": {
-    "node": ">=18.0"
   }
 }

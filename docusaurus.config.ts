@@ -1,6 +1,6 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from 'prism-react-renderer'
+import type { Config } from '@docusaurus/types'
+import type * as Preset from '@docusaurus/preset-classic'
 
 const config: Config = {
   title: '洪布斯',
@@ -37,7 +37,7 @@ const config: Config = {
         gtag: {
           trackingID: 'G-35BBPD2YFB',
           anonymizeIP: true,
-        }
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -57,7 +57,7 @@ const config: Config = {
         {
           to: '/blog',
           label: '博客',
-          position: 'left'
+          position: 'left',
         },
         // {
         //   to: '/docs/intro',
@@ -90,6 +90,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-};
+}
 
-export default config;
+export default config

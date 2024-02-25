@@ -1,5 +1,5 @@
 ---
-slug: a-letter 
+slug: a-letter
 title: 一封信
 authors: Hongbusi
 tags: [信]
