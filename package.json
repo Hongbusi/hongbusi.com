@@ -2,52 +2,47 @@
   "name": "hongbusi.com",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "docusaurus": "docusaurus",
+    "dev": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@next/mdx": "^13.5.4",
-    "contentlayer": "^0.3.4",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.284.0",
-    "markdown-wasm": "^1.2.0",
-    "next": "^13.5.4",
-    "next-contentlayer": "^0.3.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^1.1.0",
-    "rehype-autolink-headings": "^7.0.0",
-    "rehype-pretty-code": "^0.10.1",
-    "rehype-slug": "^6.0.0",
-    "remark-gfm": "3.0.1"
+    "@docusaurus/core": "3.1.1",
+    "@docusaurus/preset-classic": "3.1.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config-react": "^0.43.1",
-    "eslint": "^8.54.0",
-    "typescript": "^5",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "^20.8.4",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "postcss-nesting": "^12.0.1",
-    "tailwindcss": "^3.3.3",
-    "tailwindcss-debug-screens": "^2.2.1"
+    "@docusaurus/module-type-aliases": "3.1.1",
+    "@docusaurus/tsconfig": "3.1.1",
+    "@docusaurus/types": "3.1.1",
+    "typescript": "~5.2.2"
   },
-  "pnpm": {
-    "overrides": {
-      "@opentelemetry/api": "1.4.1",
-      "@opentelemetry/core": "1.13.0",
-      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-      "@opentelemetry/resources": "1.13.0",
-      "@opentelemetry/sdk-trace-base": "1.13.0",
-      "@opentelemetry/sdk-trace-node": "1.13.0",
-      "@opentelemetry/semantic-conventions": "1.13.0"
-    }
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
   }
 }
