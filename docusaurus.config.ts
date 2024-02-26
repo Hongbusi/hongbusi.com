@@ -77,11 +77,13 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/Hongbusi',
-          class: 'header-github-link',
-          position: 'right',
+          'href': 'https://github.com/Hongbusi',
+          'position': 'right',
+          'className': 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
+      hideOnScroll: true,
     },
     footer: {
       style: 'dark',
@@ -104,7 +106,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash'],
+      additionalLanguages: [
+        'bash',
+        'json',
+        'yaml',
+      ],
     },
   } satisfies Preset.ThemeConfig,
 }
