@@ -1,9 +1,13 @@
 ---
-slug: first-vscode-extension
 title: My First VS Code Extension
+date: 2022-03-07T11:55
 authors: Hongbusi
 tags: [英文, vscode extension]
 ---
+
+This article will teach you how to publish a vscode extension.
+
+<!-- truncate -->
 
 ## Installation
 

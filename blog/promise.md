@@ -1,9 +1,13 @@
 ---
-slug: promise
 title: Promise
+date: 2022-04-17T11:55
 authors: Hongbusi
 tags: [js]
 ---
+
+手写 Promise。
+
+<!-- truncate -->
 
 ## 异步任务的处理
 

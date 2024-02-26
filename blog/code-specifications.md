@@ -1,9 +1,13 @@
 ---
-slug: code-specifications
 title: 代码规范之旅：享受自动格式化的乐趣
+date: 2021-12-19T11:55
 authors: Hongbusi
 tags: [eslint]
 ---
+
+代码格式化工具配置。
+
+<!-- truncate -->
 
 ## 集成 `editorconfig`
 

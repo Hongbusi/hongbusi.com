@@ -1,11 +1,13 @@
 ---
-slug: nginx-ssl
 title: Nginx 服务器 SSL 证书安装
+date: 2024-01-28T11:55
 authors: Hongbusi
 tags: [nginx, 服务器]
 ---
 
 本文将介绍如何为 Nginx 服务器安装 SSL 证书，并包含了一些常见问题的简便解决方案。
+
+<!-- truncate -->
 
 ## 操作环境
 

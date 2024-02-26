@@ -1,11 +1,13 @@
 ---
-slug: rework-3
 title: 重来3：跳出疯狂的忙碌
+date: 2024-02-22T11:55
 authors: Hongbusi
 tags: [读书笔记]
 ---
 
 作者：贾森·弗里德 & 戴维·海涅迈尔·汉森。
+
+<!-- truncate -->
 
 ## 第二章 “我快忙疯了”
 

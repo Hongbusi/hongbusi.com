@@ -16,6 +16,9 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN'],
+    localeConfigs: {
+
+    },
   },
 
   presets: [
@@ -27,8 +30,10 @@ const config: Config = {
           editUrl: 'https://github.com/Hongbusi/hongbusi.com/tree/main/',
         },
         blog: {
+          routeBasePath: '/posts',
           showReadingTime: true,
-          blogSidebarCount: 6,
+          blogSidebarTitle: '最近的文章',
+          blogSidebarCount: 10,
           editUrl: 'https://github.com/Hongbusi/hongbusi.com/tree/main/',
         },
         theme: {
@@ -44,7 +49,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     navbar: {
       title: '洪布斯',
       logo: {
@@ -55,20 +60,25 @@ const config: Config = {
       },
       items: [
         {
-          to: '/blog',
+          to: '/docs/intro',
+          label: '知识库',
+          position: 'left',
+        },
+        {
+          to: '/docs/topic/intro',
+          label: '专题',
+          position: 'left',
+        },
+        {
+          to: '/posts',
           label: '博客',
           position: 'left',
         },
-        // {
-        //   to: '/docs/intro',
-        //   label: '文档',
-        //   position: 'left'
-        // },
-        // {
-        //   to: '/blog/tags',
-        //   label: '标签',
-        //   position: 'left'
-        // },
+        {
+          to: '/about',
+          label: '关于',
+          position: 'right',
+        },
         {
           href: 'https://github.com/Hongbusi',
           label: 'GitHub',
@@ -83,7 +93,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © 2020 - ${new Date().getFullYear()} Hongbusi. <a href="https://beian.miit.gov.cn" target="_blank" rel="noreferrer">浙ICP备2022017304号-1</a>`,
+      copyright: `Copyright © 2020 - ${new Date().getFullYear()}, All in Hongbusi. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

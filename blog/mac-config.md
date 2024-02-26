@@ -1,9 +1,13 @@
 ---
-slug: mac-config
 title: Mac 开发环境配置
+date: 2022-11-30T11:55
 authors: Hongbusi
 tags: [mac, config]
 ---
+
+当程序员拿到一台新 Mac，会做些什么。
+
+<!-- truncate -->
 
 ## brew
 

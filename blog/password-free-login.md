@@ -1,9 +1,13 @@
 ---
-slug: password-free-login
 title: 免密登录
+date: 2022-09-20T11:55
 authors: Hongbusi
 tags: [ssh, 服务器]
 ---
+
+服务器免密登录。
+
+<!-- truncate -->
 
 ## 登录服务器
 
