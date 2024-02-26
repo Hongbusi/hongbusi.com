@@ -25,6 +25,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Hongbusi/hongbusi.com/tree/main/',
+          showLastUpdateTime: true,
         },
         blog: {
           routeBasePath: '/posts',
@@ -61,8 +62,8 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/docs/topic/intro',
-          label: '专题',
+          to: '/docs/columns/intro',
+          label: '专栏',
           position: 'left',
         },
         {
@@ -77,7 +78,7 @@ const config: Config = {
         },
         {
           href: 'https://github.com/Hongbusi',
-          label: 'GitHub',
+          class: 'header-github-link',
           position: 'right',
         },
       ],
