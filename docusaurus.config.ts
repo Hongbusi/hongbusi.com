@@ -16,9 +16,6 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN'],
-    localeConfigs: {
-
-    },
   },
 
   presets: [
@@ -48,7 +45,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/social-card.jpg',
     navbar: {
       title: '洪布斯',
@@ -84,20 +80,30 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
-        {
-          href: 'https://twitter.com/Hongbusi',
-          label: 'Twitter',
-          position: 'right',
-        },
       ],
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          label: '本站源码',
+          href: 'https://github.com/Hongbusi/hongbusi.com',
+        },
+        {
+          label: 'Twitter',
+          href: 'https://twitter.com/Hongbusi',
+        },
+        {
+          label: '掘金',
+          href: 'https://juejin.cn/user/984809513428461',
+        },
+      ],
       copyright: `Copyright © 2020 - ${new Date().getFullYear()}, All in Hongbusi. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash'],
     },
   } satisfies Preset.ThemeConfig,
 }
