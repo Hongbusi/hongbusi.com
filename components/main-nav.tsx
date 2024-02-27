@@ -13,42 +13,27 @@ export function MainNav() {
 
   return (
     <div className="mr-4 hidden md:flex">
-      <Link href="/" className="mr-12 flex items-center space-x-2">
+      <Link href="/" className="mr-10 flex items-center space-x-2">
         <Icons.logo className="h-6 w-6" />
-        <span className="hidden text-lg font-bold sm:inline-block">
+        <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
-      <nav className="flex items-center gap-6 text-base">
-        <Link
-          href="/posts"
-          className={cn(
-            'transition-colors hover:text-foreground',
-            pathname?.startsWith('/posts')
-              ? 'text-foreground'
-              : 'text-foreground/60',
-          )}
-        >
-          博客
-        </Link>
-        <Link
-          href="/docs"
-          className={cn(
-            'transition-colors hover:text-foreground',
-            pathname === '/docs' ? 'text-foreground' : 'text-foreground/60',
-          )}
-        >
-          文档
-        </Link>
-        <Link
-          href="/about"
-          className={cn(
-            'transition-colors hover:text-foreground',
-            pathname === '/about' ? 'text-foreground' : 'text-foreground/60',
-          )}
-        >
-          关于
-        </Link>
+      <nav className="flex items-center gap-6 text-sm">
+        {siteConfig.nav.map((segment, idx) => {
+          return (
+            <Link
+              key={`${segment.url}_nav_${idx}`}
+              href={segment.url}
+              className={cn(
+                'transition-colors hover:text-foreground',
+                pathname === segment.url ? 'text-foreground' : 'text-foreground/60',
+              )}
+            >
+              {segment.label}
+            </Link>
+          )
+        })}
       </nav>
     </div>
   )

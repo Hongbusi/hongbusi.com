@@ -31,10 +31,10 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: 'ghost',
                   }),
-                  'w-9 px-0',
+                  'w-8 h-8 px-0',
                 )}
               >
-                <Icons.gitHub className="h-5 w-5" />
+                <Icons.gitHub className="w-[1.2rem] h-[1.2rem]" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -48,10 +48,10 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: 'ghost',
                   }),
-                  'w-9 px-0',
+                  'w-8 h-8 px-0',
                 )}
               >
-                <Icons.twitter className="h-4 w-4 fill-current" />
+                <Icons.twitter className="w-4 h-4 fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>

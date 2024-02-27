@@ -36,15 +36,15 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-4 text-sm">
               {siteConfig.footer.links.map((segment) => {
                 return (
                   <div key={`footer_${segment.title}`}>
-                    <h6 className="text-foreground overwrite text-base">{segment.title}</h6>
+                    <h6 className="text-foreground overwrite">{segment.title}</h6>
                     <ul className="mt-4 space-y-2">
                       {segment.items.map(({ label, url }, idx) => {
                         const children = (
-                          <div className="text-sm transition-colors text-foreground/60 hover:text-foreground">
+                          <div className="transition-colors text-foreground/60 hover:text-foreground">
                             {label}
                           </div>
                         )

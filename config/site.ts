@@ -7,74 +7,36 @@ export const siteConfig = {
     github: 'https://github.com/Hongbusi',
     twitter: 'https://twitter.com/Hongbusi',
   },
+  nav: [
+    { label: '博客', url: '/posts' },
+    { label: '关于', url: '/about' },
+  ],
   footer: {
     links: [
       {
         title: '产品',
         items: [
-          {
-            label: 'Style Guide',
-            url: 'docs/',
-          },
-          {
-            label: 'Second Doc',
-            url: 'docs/doc2/',
-          },
+          { label: 'Blog', url: '/' },
         ],
       },
       {
-        title: 'Community',
+        title: '社区',
         items: [
-          {
-            label: 'Stack Overflow',
-            url: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          },
-          {
-            label: 'Discord',
-            url: 'https://discordapp.com/invite/docusaurus',
-          },
-          {
-            label: 'Twitter',
-            url: 'https://twitter.com/docusaurus',
-          },
-          {
-            label: 'Twitter',
-            url: 'https://twitter.com/docusaurus',
-          },
+          { label: 'GitHub', url: 'https://github.com/Hongbusi' },
+          { label: 'Twitter', url: 'https://twitter.com/Hongbusi' },
+          { label: '掘金', url: 'https://juejin.cn/user/984809513428461' },
         ],
       },
       {
-        title: 'Docs',
+        title: '文档',
         items: [
-          {
-            label: 'Style Guide',
-            url: 'docs/',
-          },
-          {
-            label: 'Second Doc',
-            url: 'docs/doc2/',
-          },
+          { label: 'Docs', url: 'https://docs.hongbusi.com' },
         ],
       },
       {
         title: '友情链接',
         items: [
-          {
-            label: 'Stack Overflow',
-            url: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          },
-          {
-            label: 'Discord',
-            url: 'https://discordapp.com/invite/docusaurus',
-          },
-          {
-            label: 'Twitter',
-            url: 'https://twitter.com/docusaurus',
-          },
-          {
-            label: 'Twitter',
-            url: 'https://twitter.com/docusaurus',
-          },
+          { label: '添加友链', url: 'https://github.com/Hongbusi/hongbusi.com/issues' },
         ],
       },
     ],
