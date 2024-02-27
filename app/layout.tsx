@@ -2,10 +2,12 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 
 import '@/styles/globals.css'
-
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  // manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
 interface RootLayoutProps {
@@ -82,15 +84,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col bg-background">
-            {/* <SiteHeader /> */}
+            <SiteHeader />
             <main className="flex-1">{children}</main>
-            {/* <SiteFooter /> */}
+            <SiteFooter />
           </div>
-          {/* <TailwindIndicator /> */}
-          {/* <ThemeSwitcher /> */}
+          <TailwindIndicator />
           {/* <Analytics /> */}
           {/* <NewYorkToaster /> */}
-          {/* <DefaultToaster /> */}
           {/* <NewYorkSonner /> */}
         </ThemeProvider>
       </body>

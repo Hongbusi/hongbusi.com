@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button'
 
-export default function Home() {
+export default function IndexPage() {
   return (
-    <div>
+    <div className="container relative">
       <Button>Click me</Button>
     </div>
   )
