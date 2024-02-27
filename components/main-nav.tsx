@@ -13,7 +13,7 @@ export function MainNav() {
 
   return (
     <div className="mr-4 hidden md:flex">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
+      <Link href="/" className="mr-12 flex items-center space-x-2">
         <Icons.logo className="h-6 w-6" />
         <span className="hidden text-lg font-bold sm:inline-block">
           {siteConfig.name}
@@ -23,7 +23,7 @@ export function MainNav() {
         <Link
           href="/posts"
           className={cn(
-            'transition-colors hover:text-foreground/80',
+            'transition-colors hover:text-foreground',
             pathname?.startsWith('/posts')
               ? 'text-foreground'
               : 'text-foreground/60',
@@ -34,7 +34,7 @@ export function MainNav() {
         <Link
           href="/docs"
           className={cn(
-            'transition-colors hover:text-foreground/80',
+            'transition-colors hover:text-foreground',
             pathname === '/docs' ? 'text-foreground' : 'text-foreground/60',
           )}
         >
@@ -43,7 +43,7 @@ export function MainNav() {
         <Link
           href="/about"
           className={cn(
-            'transition-colors hover:text-foreground/80',
+            'transition-colors hover:text-foreground',
             pathname === '/about' ? 'text-foreground' : 'text-foreground/60',
           )}
         >

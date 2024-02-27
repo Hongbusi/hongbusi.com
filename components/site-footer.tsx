@@ -81,7 +81,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-12 lg:mt-24">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
           <div className="flex flex-col text-foreground/60 text-sm text-center">
