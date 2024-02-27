@@ -15,11 +15,11 @@ export function MainNav() {
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
+        <span className="hidden text-lg font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
-      <nav className="flex items-center gap-6 text-sm">
+      <nav className="flex items-center gap-6 text-base">
         <Link
           href="/posts"
           className={cn(
