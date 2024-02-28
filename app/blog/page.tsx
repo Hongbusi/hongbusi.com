@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: '关于洪布斯的博客',
 }
 
-export default function PostsPage() {
+export default function BlogPage() {
   return (
     <div className="container">
-      Posts page
+      Blog page
     </div>
   )
 }

@@ -8,7 +8,7 @@ export const siteConfig = {
     twitter: 'https://twitter.com/Hongbusi',
   },
   nav: [
-    { label: '博客', url: '/posts' },
+    { label: '博客', url: '/blog' },
     { label: '关于', url: '/about' },
   ],
   footer: {
