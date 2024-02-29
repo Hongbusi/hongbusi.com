@@ -1,11 +1,20 @@
+/* eslint-disable ts/ban-ts-comment */
+// @ts-nocheck
+
+import { writeFileSync } from 'node:fs'
+import type { ComputedFields } from 'contentlayer/source-files'
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import readingTime from 'reading-time'
 import remarkGfm from 'remark-gfm'
+import { slug } from 'github-slugger'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const isProduction = process.env.NODE_ENV === 'production'
+
+const computedFields: ComputedFields = {
+  readingTime: { type: 'json', resolve: doc => readingTime(doc.body.raw) },
   path: {
     type: 'string',
     resolve: doc => `/${doc._raw.flattenedPath}`,
@@ -14,6 +23,25 @@ const computedFields = {
     type: 'string',
     resolve: doc => doc._raw.flattenedPath.split('/').slice(1).join('/'),
   },
+}
+
+/**
+ * Count the occurrences of all tags across blog posts and write to json file
+ */
+function createTagCount(allBlogs) {
+  const tagCount: Record<string, number> = {}
+  allBlogs.forEach((file) => {
+    if (file.tags && (!isProduction || file.draft !== true)) {
+      file.tags.forEach((tag) => {
+        const formattedTag = slug(tag)
+        if (formattedTag in tagCount)
+          tagCount[formattedTag] += 1
+        else
+          tagCount[formattedTag] = 1
+      })
+    }
+  })
+  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
 }
 
 export const Blog = defineDocumentType(() => ({
@@ -33,14 +61,17 @@ export const Blog = defineDocumentType(() => ({
       type: 'date',
       required: true,
     },
-    // tags: {
-    // },
-    // category: {
-
-    // },
-    published: {
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+      default: [],
+    },
+    category: {
+      type: 'string',
+      required: true,
+    },
+    draft: {
       type: 'boolean',
-      default: true,
     },
   },
   computedFields,
@@ -81,5 +112,9 @@ export default makeSource({
         },
       ],
     ],
+  },
+  onSuccess: async (importData) => {
+    const { allBlogs } = await importData()
+    createTagCount(allBlogs)
   },
 })
