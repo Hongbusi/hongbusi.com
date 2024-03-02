@@ -1,5 +1,3 @@
-/* eslint-disable ts/ban-ts-comment */
-// @ts-nocheck
 'use client'
 
 import * as React from 'react'
@@ -23,7 +21,7 @@ export function DashboardTableOfContents({ toc }: TocProps) {
           .map(id => id?.split('#')[1])
         : [],
     [toc],
-  )
+  ) as string[]
   const activeHeading = useActiveItem(itemIds)
   const mounted = useMounted()
 

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
-import type { Blog } from 'contentlayer/generated'
-import { allBlogs } from 'contentlayer/generated'
+import type { Post } from 'contentlayer/generated'
+import { allPosts } from 'contentlayer/generated'
 
 import '@/styles/mdx.css'
 import { Mdx } from '@/components/mdx-components'
@@ -20,28 +20,28 @@ interface Props {
 export default async function PostPage({ params }: Props) {
   const slug = params?.slug
 
-  const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
+  const sortedCoreContents = allCoreContent(sortPosts(allPosts))
   const postIndex = sortedCoreContents.findIndex(p => p.slug === slug)
   if (postIndex === -1)
     return notFound()
 
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
-  const post = allBlogs.find(p => p.slug === slug) as Blog
+  const post = allPosts.find(p => p.slug === slug) as Post
 
   const toc = await getTableOfContents(post.body.raw)
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+    <main className="xl:grid xl:grid-cols-[1fr_200px] lg:gap-10">
       <div className="mx-auto w-full min-w-0">
         <div className="space-y-2">
           <h1 className={cn('scroll-m-20 text-4xl font-bold tracking-tight')}>
             {post.title}
           </h1>
-        </div>
-        <div className="my-4">
-          <time dateTime={post.date}>{post.date}</time>
-          {` · ${post.readingTime.text}`}
+          <p>
+            <time dateTime={post.date}>{post.date}</time>
+            {` · ${post.readingTime.text}`}
+          </p>
         </div>
         <div className="pb-12 pt-8">
           <Mdx code={post.body.code} />
@@ -49,12 +49,8 @@ export default async function PostPage({ params }: Props) {
         <PostsPager next={next} prev={prev} />
       </div>
       <div className="hidden text-sm xl:block">
-        <div className="sticky top-16 -mt-10 pt-4">
-          <ScrollArea className="pb-10">
-            <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
-              <DashboardTableOfContents toc={toc} />
-            </div>
-          </ScrollArea>
+        <div className="sticky top-6 -mt-10 py-12">
+          <DashboardTableOfContents toc={toc} />
         </div>
       </div>
     </main>

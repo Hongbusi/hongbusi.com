@@ -4,6 +4,7 @@ export const siteConfig = {
   ogImage: 'https://hongubis.com/og.jpg',
   description: '知道的越多，不知道的越多。',
   links: {
+    docs: 'https://docs.hongbusi.com',
     github: 'https://github.com/Hongbusi',
     twitter: 'https://twitter.com/Hongbusi',
   },

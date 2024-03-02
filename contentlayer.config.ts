@@ -44,9 +44,9 @@ function createTagCount(allBlogs) {
   writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
 }
 
-export const Blog = defineDocumentType(() => ({
-  name: 'Blog',
-  filePathPattern: './blog/**/*.mdx',
+export const Post = defineDocumentType(() => ({
+  name: 'Post',
+  filePathPattern: './posts/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -79,7 +79,7 @@ export const Blog = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: './content',
-  documentTypes: [Blog],
+  documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -114,7 +114,7 @@ export default makeSource({
     ],
   },
   onSuccess: async (importData) => {
-    const { allBlogs } = await importData()
-    createTagCount(allBlogs)
+    const { allPosts } = await importData()
+    createTagCount(allPosts)
   },
 })

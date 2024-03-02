@@ -2,12 +2,15 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 
 import '@/styles/globals.css'
+
+import { Sidebar } from './components/sidebar'
+import { Menu } from './components/menu'
 import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
+import { cn } from '@/lib/utils'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ModeToggle } from '@/components/mode-toggle'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -73,7 +76,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen bg-background font-sans antialiased md:overflow-hidden',
           fontSans.variable,
         )}
       >
@@ -83,15 +86,31 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col bg-background">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
+          <div className="container flex justify-center items-center min-h-screen">
+            <div className="rounded-[0.5rem] border bg-background shadow-md md:shadow-xl">
+              <div className="flex justify-between items-center px-2 lg:px-4">
+                <Menu />
+                <ModeToggle />
+              </div>
+
+              <div className="border-t">
+                <div className="rounded-[0.5rem] bg-background">
+                  <div className="grid lg:grid-cols-5 ">
+                    <Sidebar className="hidden lg:block" />
+                    <div className="col-span-3 lg:col-span-4 lg:border-l">
+                      <ScrollArea className="lg:h-[666px] xl:h-[777px] 2xl:h-[888px]">
+                        <div className="relative px-4 py-6 lg:px-8">
+                          {children}
+                        </div>
+                      </ScrollArea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
           <TailwindIndicator />
-          {/* <Analytics /> */}
-          {/* <NewYorkToaster /> */}
-          {/* <NewYorkSonner /> */}
         </ThemeProvider>
       </body>
     </html>
