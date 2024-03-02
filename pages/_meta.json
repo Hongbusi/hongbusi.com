@@ -15,12 +15,9 @@
     "type": "page",
     "title": "Posts"
   },
-  "about": {
+  "books": {
     "type": "page",
-    "title": "About",
-    "theme": {
-      "typesetting": "article"
-    }
+    "title": "读书笔记"
   },
   "404": {
     "type": "page",
