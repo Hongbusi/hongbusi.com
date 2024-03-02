@@ -3,11 +3,11 @@ import type { Config } from 'tailwindcss'
 const config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,mdx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    'content/**/*.mdx',
+    'theme.config.tsx',
   ],
   prefix: '',
   theme: {
@@ -15,7 +15,7 @@ const config = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1440px',
+        '2xl': '1400px',
       },
     },
     extend: {
@@ -75,7 +75,6 @@ const config = {
       },
     },
   },
-  // eslint-disable-next-line ts/no-require-imports
   plugins: [require('tailwindcss-animate')],
 } satisfies Config
 

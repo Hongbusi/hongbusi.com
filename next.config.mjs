@@ -1,21 +1,10 @@
-import { withContentlayer } from 'next-contentlayer'
+import nextra from 'nextra'
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const withNextra = nextra({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx',
+})
+
+export default withNextra({
   reactStrictMode: true,
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cali.so',
-      },
-    ],
-  },
-}
-
-export default withContentlayer(nextConfig)
+})
