@@ -1,12 +1,14 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import '@/styles/globals.css'
+import Particles from "@/components/particles"
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GoogleAnalytics gaId='G-35BBPD2YFB' />
       <Component {...pageProps} />
+      <Particles className="fixed inset-0 -z-10 animate-fade-in" quantity={100} />
     </>
   )
 }
