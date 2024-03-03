@@ -1,6 +1,6 @@
 ---
 title: Nginx 服务器 SSL 证书安装
-date: 2024-01-28
+date: 2024/01/28
 ---
 
 # Nginx 服务器 SSL 证书安装

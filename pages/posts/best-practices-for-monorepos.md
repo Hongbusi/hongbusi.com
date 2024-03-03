@@ -1,6 +1,6 @@
 ---
-title: 从构建到发布：Monorepo 的最佳实践 
-date: 2023-03-14
+title: 从构建到发布：Monorepo 的最佳实践
+date: 2023/03/14
 ---
 
 # 从构建到发布：Monorepo 的最佳实践
