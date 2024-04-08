@@ -2,12 +2,22 @@
 import {profileConfig} from "../config";
 ---
 
-<div class="card-base max-w-[var(--page-width)] min-h-[4.5rem] rounded-b-none mx-auto flex items-center px-6">
+<div class="card-base max-w-[var(--page-width)] min-h-[4.5rem] rounded-b-none mx-auto flex justify-between items-center px-6">
   <div class="transition text-50 text-sm">
     © 2024 {profileConfig.name}. All Rights Reserved.
     <br>
+    Designed by
     <a
-      class="transition text-sm text-50 hover:text-[var(--primary)]"
+      class="link text-[var(--primary)]"
+      href="https://github.com/saicaca/fuwari"
+      target="_blank"
+    >
+      Fuwari
+    </a>
+  </div>
+  <div class="text-sm">
+    <a
+      class="link text-[var(--primary)]"
       href="https://beian.miit.gov.cn"
       target="_blank"
       rel="noreferrer"
