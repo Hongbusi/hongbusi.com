@@ -14,15 +14,15 @@ const posts = useArticles()
       </a>
       <div class="flex flex-wrap space-x-2 text-sm opacity-75">
         <div class="flex items-center space-x-1">
-          <ClockIcon class="size-4" />
+          <div class="i-mingcute:time-line" />
           <time> {{ post.meta?.published || '' }}</time>
         </div>
         <div v-if="post.meta?.category" class="flex items-center space-x-1">
-          <RectangleStackIcon class="size-4" />
+          <div class="i-ph:stack-light" />
           <a :href="`/categories/${post.meta.category}`">{{ post.meta.category }}</a>
         </div>
         <div v-if="post.meta?.tags?.length" class="flex items-center space-x-1">
-          <HashtagIcon class="size-4" />
+          <div class="i-solar:hashtag-square-bold" />
           <template v-for="(tag, idx) in post.meta.tags" :key="idx">
             <a :href="`/tags/${tag}`">{{ tag }}</a>
             <span v-if="idx !== post.meta.tags.length - 1" class="opacity-70 text-xs">/</span>
