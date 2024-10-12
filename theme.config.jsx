@@ -1,3 +1,5 @@
+import Cusdis from 'nextra-theme-blog/cusdis'
+
 export default {
   darkMode: true,
   footer: (
@@ -29,4 +31,5 @@ export default {
       </style>
     </small>
   ),
+  comments: <Cusdis lang="zh-cn" appId="d30b8dc2-ee4b-46c9-979f-4805192fda9b" />,
 }
