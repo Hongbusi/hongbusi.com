@@ -3,10 +3,7 @@ node_modules
 node_cache
 
 dist
-packages/theme/node.d.ts
-packages/theme/node.js
-.vitepress/cache
-.vitepress/.temp
+.next
 package-lock.json
 yarn.lock
 

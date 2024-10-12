@@ -1,3 +1,3 @@
 # Hongbusi
 
-My personal [website](https://hongbusi.com), powered by [vitepress-theme-blog](https://github.com/Hongbusi/vitepress-theme-blog).
+My personal [website](https://hongbusi.com), powered by [nextra](https://github.com/shuding/nextra).

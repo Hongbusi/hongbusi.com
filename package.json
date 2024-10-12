@@ -2,27 +2,22 @@
   "name": "hongbusi.com",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@unocss/reset": "^0.60.4",
-    "dayjs": "^1.11.11",
-    "fast-glob": "^3.3.2",
-    "gray-matter": "^4.0.3",
-    "vue": "^3.4.31"
+    "dayjs": "^1.11.13",
+    "next": "^14.2.15",
+    "nextra": "^3.0.10",
+    "nextra-theme-blog": "^3.0.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.2",
-    "@iconify/json": "^2.2.225",
-    "@types/node": "^20.14.2",
-    "eslint": "^9.6.0",
-    "typescript": "^5.5.3",
-    "unocss": "^0.61.0",
-    "unplugin-vue-components": "^0.27.2",
-    "vite": "^5.3.3",
-    "vitepress": "^1.2.3"
+    "@antfu/eslint-config": "^3.7.3",
+    "eslint": "^9.12.0"
   }
 }
