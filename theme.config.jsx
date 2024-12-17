@@ -1,7 +1,12 @@
-import Cusdis from 'nextra-theme-blog/cusdis'
-
 export default {
   darkMode: true,
+  head: ({ meta }) => (
+    <>
+      {meta.description && <meta name="description" content={meta.description} />}
+      {meta.tag && <meta name="keywords" content={meta.tag} />}
+      {meta.author && <meta name="author" content={meta.author} />}
+    </>
+  ),
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <abbr
@@ -31,5 +36,4 @@ export default {
       </style>
     </small>
   ),
-  comments: <Cusdis lang="zh-cn" appId="d30b8dc2-ee4b-46c9-979f-4805192fda9b" />,
 }

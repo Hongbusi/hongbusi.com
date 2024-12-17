@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Hongbusi]]></title>
+        <description><![CDATA[Hongbusi]]></description>
+        <link>https://hongbusi.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 17 Dec 2024 07:39:26 GMT</lastBuildDate>
+        <atom:link href="https://hongbusi.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[一封信]]></title>
+            <description><![CDATA[五周年纪念日。]]></description>
+            <link>/posts/a-letter</link>
+            <guid isPermaLink="true">/posts/a-letter</guid>
+            <category><![CDATA[信]]></category>
+            <dc:creator><![CDATA[Hongbusi]]></dc:creator>
+            <pubDate>Wed, 26 May 2021 16:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
